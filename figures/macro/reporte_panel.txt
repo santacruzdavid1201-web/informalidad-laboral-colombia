@@ -1,0 +1,1384 @@
+   [2019-2025] skiprows detectado: 1
+   [2019-2025] Primeras columnas: ['Departamento', 'Año IDC', 'INS-1-1', 'INS-1-2', 'INS-1-3', 'INS-2-1']
+   [2019-2025] Columna de año detectada: 'Año IDC'
+
+Panel final — filas totales : 231
+Departamentos               : 33
+Años IDC                    : [np.int64(2019), np.int64(2020), np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025)]
+Obs. con informalidad válida: 230
+
+Cobertura por variable del modelo (obs. no-NaN):
+  INS-2-1     : 231 / 231
+  FIN-1-4     : 231 / 231
+  NEG-2-2     : 231 / 231
+  EDU-1-4     : 231 / 231
+  TIC-1-1     : 231 / 231
+  INF-2-2     : 210 / 231
+  LAB-1-1     : 231 / 231
+  LAB-1-2     : 231 / 231
+  LAB-1-3     : 230 / 231
+  INN-1-1     : 231 / 231
+  INN-1-2     : 231 / 231
+  INN-2-1     : 231 / 231
+  INN-2-2     : 231 / 231
+
+Cobertura de candidatos v7 heredados (obs. no-NaN):
+  SAL-1-1     : 231 / 231
+  SAL-1-2     : 231 / 231
+  SAL-1-3     : 231 / 231
+  SAL-3-2     : 231 / 231
+  SAL-3-3     : 231 / 231
+  SAL-3-4     : 231 / 231
+  NEG-1-1     : 231 / 231
+
+Cobertura de variables nuevas v7 — 7 pilares teóricos (obs. no-NaN):
+  EDS-1-1     : 231 / 231
+  EDS-1-2     : 231 / 231
+  EDS-1-3     : 231 / 231
+  EDS-2-1     : 231 / 231
+  EDS-2-2     : 231 / 231
+  EDS-2-3     : 231 / 231
+  EDS-2-4     : 231 / 231
+  EDS-3-1     : 231 / 231
+  EDS-3-2     : 231 / 231
+  EDU-1-1     : 231 / 231
+  EDU-1-2     : 231 / 231
+  EDU-1-3     : 231 / 231
+  EDU-1-4     : 231 / 231
+  EDU-1-5     : 231 / 231
+  EDU-2-1     : 231 / 231
+  EDU-2-2     : 231 / 231
+  EDU-2-3     : 231 / 231
+  EDU-2-4     : 231 / 231
+  FIN-1-1     : 231 / 231
+  FIN-1-2     : 231 / 231
+  FIN-1-3     : 231 / 231
+  FIN-1-4     : 231 / 231
+  INF-1-1     : 231 / 231
+  INF-1-2     : 196 / 231
+  INF-1-3     : 231 / 231
+  INF-1-4     : 231 / 231
+  INF-1-5     : 231 / 231
+  INF-2-1     : 210 / 231
+  INF-2-2     : 210 / 231
+  INF-2-3     : 210 / 231
+  INF-2-4     : 224 / 231
+  INF-2-5     : 224 / 231
+  INF-2-6     : 222 / 231
+  INF-3-1     : 196 / 231
+  INF-3-2     : 196 / 231
+  INF-3-3     : 217 / 231
+  INF-3-4     : 217 / 231
+  INN-1-1     : 231 / 231
+  INN-1-2     : 231 / 231
+  INN-1-3     : 231 / 231
+  INN-1-4     : 231 / 231
+  INN-2-1     : 231 / 231
+  INN-2-2     : 231 / 231
+  INN-2-3     : 231 / 231
+  INN-2-4     : 231 / 231
+  INS-1-1     : 231 / 231
+  INS-1-3     : 231 / 231
+  INS-2-1     : 231 / 231
+  INS-2-3     : 231 / 231
+  INS-3-3     : 231 / 231
+  LAB-1-1     : 231 / 231
+  LAB-1-2     : 231 / 231
+  LAB-1-4     : 230 / 231
+  LAB-1-5     : 231 / 231
+  NEG-1-2     : 231 / 231
+  NEG-1-3     : 231 / 231
+  NEG-2-1     : 231 / 231
+  SAL-2-1     : 231 / 231
+  SAL-2-2     : 231 / 231
+  SAL-2-3     : 231 / 231
+  SAL-3-1     : 231 / 231
+  SAL-3-2     : 231 / 231
+  SAL-3-3     : 231 / 231
+  SAL-3-4     : 231 / 231
+  SOF-1-1     : 231 / 231
+  SOF-1-2     : 231 / 231
+  TAM-1-1     : 231 / 231
+  TAM-2-1     : 231 / 231
+  TAM-2-2     : 231 / 231
+  TIC-1-1     : 231 / 231
+  TIC-1-2     : 231 / 231
+  TIC-1-4     : 231 / 231
+  TIC-2-1     : 231 / 231
+  TIC-2-2     : 231 / 231
+  TIC-2-3     : 231 / 231
+
+### institucional_puro_pca · Capacidad institucional y fiscal (EN EL MODELO desde v9, recalculado con 5 variables) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['INS-1-1', 'INS-1-3', 'INS-2-1', 'INS-2-3', 'INS-3-3']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.6045
+KMO global: 0.7698
+KMO por variable:
+INS-1-1    0.8322
+INS-1-3    0.8055
+INS-2-1    0.7086
+INS-2-3    0.7878
+INS-3-3    0.7279
+Bartlett: chi2=572.3208  p=1.494e-116
+Cargas factoriales (ancladas):
+INS-1-1    0.509654
+INS-1-3    0.484071
+INS-2-1    0.540035
+INS-2-3    0.322690
+INS-3-3    0.331905
+Correlaciones internas:
+         INS-1-1  INS-1-3  INS-2-1  INS-2-3  INS-3-3
+INS-1-1    1.000    0.694    0.796    0.391    0.419
+INS-1-3    0.694    1.000    0.758    0.347    0.313
+INS-2-1    0.796    0.758    1.000    0.468    0.507
+INS-2-3    0.391    0.347    0.468    1.000    0.099
+INS-3-3    0.419    0.313    0.507    0.099    1.000
+
+### capital_humano_digital_pca · Capital humano y transformación digital ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['EDU-1-4', 'EDU-2-1', 'EDS-1-1', 'TIC-1-1', 'TIC-1-2', 'TIC-1-4', 'TIC-2-1', 'TIC-2-2', 'TIC-2-3']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.6955
+KMO global: 0.8990
+KMO por variable:
+EDU-1-4    0.8858
+EDU-2-1    0.9540
+EDS-1-1    0.9270
+TIC-1-1    0.9206
+TIC-1-2    0.8778
+TIC-1-4    0.8647
+TIC-2-1    0.8899
+TIC-2-2    0.8717
+TIC-2-3    0.8911
+Bartlett: chi2=2130.4294  p=0
+Cargas factoriales (ancladas):
+EDU-1-4    0.340585
+EDU-2-1    0.344157
+EDS-1-1    0.354550
+TIC-1-1    0.369628
+TIC-1-2    0.232213
+TIC-1-4    0.347436
+TIC-2-1    0.351357
+TIC-2-2    0.360334
+TIC-2-3    0.274408
+Correlaciones internas:
+         EDU-1-4  EDU-2-1  EDS-1-1  TIC-1-1  TIC-1-2  TIC-1-4  TIC-2-1  TIC-2-2  TIC-2-3
+EDU-1-4    1.000    0.800    0.670    0.770    0.497    0.868    0.661    0.658    0.393
+EDU-2-1    0.800    1.000    0.674    0.778    0.457    0.821    0.677    0.685    0.492
+EDS-1-1    0.670    0.674    1.000    0.798    0.420    0.659    0.814    0.857    0.686
+TIC-1-1    0.770    0.778    0.798    1.000    0.560    0.811    0.784    0.822    0.539
+TIC-1-2    0.497    0.457    0.420    0.560    1.000    0.482    0.337    0.451    0.330
+TIC-1-4    0.868    0.821    0.659    0.811    0.482    1.000    0.688    0.653    0.461
+TIC-2-1    0.661    0.677    0.814    0.784    0.337    0.688    1.000    0.892    0.629
+TIC-2-2    0.658    0.685    0.857    0.822    0.451    0.653    0.892    1.000    0.665
+TIC-2-3    0.393    0.492    0.686    0.539    0.330    0.461    0.629    0.665    1.000
+
+### infraestructura_territorial_pca · Infraestructura territorial — Variante A (solo vial) ###
+Método: Promedio ponderado por carga²
+Columnas: ['INF-2-2', 'INF-2-5']
+N observaciones válidas: 210
+Varianza explicada (CP1): 0.9388
+KMO global: 0.5000
+KMO por variable:
+INF-2-2    0.5
+INF-2-5    0.5
+Bartlett: chi2=305.2503  p=2.366e-68
+Cargas factoriales (ancladas):
+INF-2-2    0.707107
+INF-2-5    0.707107
+Correlaciones internas:
+         INF-2-2  INF-2-5
+INF-2-2    1.000    0.878
+INF-2-5    0.878    1.000
+
+### laboral_pca · Mercado laboral (excl. variables redundantes con informalidad) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['LAB-1-1', 'LAB-1-2']
+Invertidas (×-1 antes de estandarizar): ['LAB-1-2']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.5991
+KMO global: 0.5000
+KMO por variable:
+LAB-1-1    0.5
+LAB-1-2    0.5
+Bartlett: chi2=9.1598  p=0.002474
+Cargas factoriales (ancladas):
+LAB-1-1    0.707107
+LAB-1-2    0.707107
+Correlaciones internas:
+         LAB-1-1  LAB-1-2
+LAB-1-1    1.000   -0.198
+LAB-1-2   -0.198    1.000
+
+### innovacion_pca · Innovación — investigación y propiedad industrial (EN EL MODELO desde v8) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['INN-1-1', 'INN-1-2', 'INN-1-3', 'INN-1-4', 'INN-2-1', 'INN-2-2', 'INN-2-3', 'INN-2-4']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.6022
+KMO global: 0.8239
+KMO por variable:
+INN-1-1    0.7760
+INN-1-2    0.7876
+INN-1-3    0.8389
+INN-1-4    0.7398
+INN-2-1    0.8482
+INN-2-2    0.8762
+INN-2-3    0.8468
+INN-2-4    0.8750
+Bartlett: chi2=1478.9402  p=2.299e-294
+Cargas factoriales (ancladas):
+INN-1-1    0.403432
+INN-1-2    0.427433
+INN-1-3    0.278348
+INN-1-4    0.205472
+INN-2-1    0.392198
+INN-2-2    0.340021
+INN-2-3    0.343647
+INN-2-4    0.383825
+Correlaciones internas:
+         INN-1-1  INN-1-2  INN-1-3  INN-1-4  INN-2-1  INN-2-2  INN-2-3  INN-2-4
+INN-1-1    1.000    0.925    0.505    0.479    0.685    0.540    0.539    0.700
+INN-1-2    0.925    1.000    0.569    0.455    0.771    0.599    0.637    0.734
+INN-1-3    0.505    0.569    1.000    0.562    0.404    0.266    0.352    0.341
+INN-1-4    0.479    0.455    0.562    1.000    0.190    0.123    0.203    0.141
+INN-2-1    0.685    0.771    0.404    0.190    1.000    0.751    0.582    0.741
+INN-2-2    0.540    0.599    0.266    0.123    0.751    1.000    0.547    0.631
+INN-2-3    0.539    0.637    0.352    0.203    0.582    0.547    1.000    0.699
+INN-2-4    0.700    0.734    0.341    0.141    0.741    0.631    0.699    1.000
+
+### tejido_empresarial_pca · Tejido empresarial (densidad y tamaño de empresas) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['NEG-2-2', 'NEG-2-3']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.8304
+KMO global: 0.5000
+KMO por variable:
+NEG-2-2    0.5
+NEG-2-3    0.5
+Bartlett: chi2=131.0782  p=2.38e-30
+Cargas factoriales (ancladas):
+NEG-2-2    0.707107
+NEG-2-3    0.707107
+Correlaciones internas:
+         NEG-2-2  NEG-2-3
+NEG-2-2    1.000    0.661
+NEG-2-3    0.661    1.000
+
+### infraestructura_territorial_serv_pca · Infraestructura territorial — Variante B (vial + servicios públicos, solo diagnóstico) ###
+Método: Promedio ponderado por carga²
+Columnas: ['INF-2-2', 'INF-2-5', 'INF-1-1', 'INF-1-2', 'INF-1-3', 'INF-1-5', 'INF-1-4']
+Invertidas (×-1 antes de estandarizar): ['INF-1-4']
+N observaciones válidas: 189
+Varianza explicada (CP1): 0.5510
+KMO global: 0.7070
+KMO por variable:
+INF-2-2    0.7635
+INF-2-5    0.6993
+INF-1-1    0.6835
+INF-1-2    0.5938
+INF-1-3    0.6088
+INF-1-5    0.8015
+INF-1-4    0.7879
+Bartlett: chi2=850.0022  p=2.236e-166
+Cargas factoriales (ancladas):
+INF-2-2    0.415473
+INF-2-5    0.381663
+INF-1-1    0.470146
+INF-1-2    0.289256
+INF-1-3    0.338210
+INF-1-5    0.452481
+INF-1-4    0.240592
+Correlaciones internas:
+         INF-2-2  INF-2-5  INF-1-1  INF-1-2  INF-1-3  INF-1-5  INF-1-4
+INF-2-2    1.000    0.878    0.339    0.377    0.395    0.356   -0.228
+INF-2-5    0.878    1.000    0.284    0.264    0.314    0.341   -0.190
+INF-1-1    0.339    0.284    1.000    0.598    0.706    0.875   -0.499
+INF-1-2    0.377    0.264    0.598    1.000    0.190    0.496   -0.129
+INF-1-3    0.395    0.314    0.706    0.190    1.000    0.652   -0.478
+INF-1-5    0.356    0.341    0.875    0.496    0.652    1.000   -0.601
+INF-1-4   -0.228   -0.190   -0.499   -0.129   -0.478   -0.601    1.000
+
+### ambiental_pca · Sostenibilidad ambiental (excluido del modelo — solo diagnóstico PCA) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['AMB-1-1', 'AMB-1-2', 'AMB-1-3', 'AMB-2-1', 'AMB-2-2']
+Invertidas (×-1 antes de estandarizar): ['AMB-1-1', 'AMB-1-2', 'AMB-1-3']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.2683
+KMO global: 0.3570
+KMO por variable:
+AMB-1-1    0.3455
+AMB-1-2    0.3562
+AMB-1-3    0.3264
+AMB-2-1    0.3773
+AMB-2-2    0.3668
+Bartlett: chi2=56.5688  p=1.606e-08
+Cargas factoriales (ancladas):
+AMB-1-1   -0.096573
+AMB-1-2    0.470169
+AMB-1-3   -0.239104
+AMB-2-1    0.594899
+AMB-2-2    0.598782
+Correlaciones internas:
+         AMB-1-1  AMB-1-2  AMB-1-3  AMB-2-1  AMB-2-2
+AMB-1-1    1.000    0.051    0.015    0.018    0.071
+AMB-1-2    0.051    1.000   -0.157   -0.019   -0.195
+AMB-1-3    0.015   -0.157    1.000    0.185   -0.173
+AMB-2-1    0.018   -0.019    0.185    1.000    0.248
+AMB-2-2    0.071   -0.195   -0.173    0.248    1.000
+
+### criminalidad_pca · Criminalidad (excluido del modelo — solo diagnóstico PCA) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['INS-4-1', 'INS-4-2', 'INS-4-3']
+Invertidas (×-1 antes de estandarizar): ['INS-4-1', 'INS-4-2', 'INS-4-3']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.6004
+KMO global: 0.6508
+KMO por variable:
+INS-4-1    0.6226
+INS-4-2    0.6817
+INS-4-3    0.6586
+Bartlett: chi2=101.8863  p=6.108e-22
+Cargas factoriales (ancladas):
+INS-4-1    0.604697
+INS-4-2    0.555117
+INS-4-3    0.571127
+Correlaciones internas:
+         INS-4-1  INS-4-2  INS-4-3
+INS-4-1    1.000    0.415    0.445
+INS-4-2    0.415    1.000    0.340
+INS-4-3    0.445    0.340    1.000
+
+### justicia_pca · Eficiencia de la justicia (excluido del modelo — solo diagnóstico PCA) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['INS-4-4', 'INS-4-5', 'INS-4-6']
+N observaciones válidas: 198
+Varianza explicada (CP1): 0.4393
+KMO global: 0.4708
+KMO por variable:
+INS-4-4    0.4773
+INS-4-5    0.4803
+INS-4-6    0.3909
+Bartlett: chi2=23.1453  p=3.766e-05
+Cargas factoriales (ancladas):
+INS-4-4    0.664530
+INS-4-5    0.717690
+INS-4-6   -0.208134
+Correlaciones internas:
+         INS-4-4  INS-4-5  INS-4-6
+INS-4-4    1.000    0.304   -0.221
+INS-4-5    0.304    1.000   -0.124
+INS-4-6   -0.221   -0.124    1.000
+
+### salud_cobertura_pca · Salud — cobertura de programas preventivos (candidato v7, solo diagnóstico) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['SAL-1-1', 'SAL-1-2', 'SAL-1-3']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.6507
+KMO global: 0.4213
+KMO por variable:
+SAL-1-1    0.4311
+SAL-1-2    0.4525
+SAL-1-3    0.3218
+Bartlett: chi2=294.3652  p=1.649e-63
+Cargas factoriales (ancladas):
+SAL-1-1    0.605780
+SAL-1-2    0.683493
+SAL-1-3    0.407268
+Correlaciones internas:
+         SAL-1-1  SAL-1-2  SAL-1-3
+SAL-1-1    1.000    0.768    0.127
+SAL-1-2    0.768    1.000    0.455
+SAL-1-3    0.127    0.455    1.000
+
+### salud_oferta_pca · Salud — oferta médica instalada (candidato v7, solo diagnóstico) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['SAL-3-2', 'SAL-3-3', 'SAL-3-4']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.7274
+KMO global: 0.5688
+KMO por variable:
+SAL-3-2    0.5387
+SAL-3-3    0.5399
+SAL-3-4    0.9464
+Bartlett: chi2=539.8970  p=1.076e-116
+Cargas factoriales (ancladas):
+SAL-3-2    0.646702
+SAL-3-3    0.643210
+SAL-3-4    0.409947
+Correlaciones internas:
+         SAL-3-2  SAL-3-3  SAL-3-4
+SAL-3-2    1.000    0.943    0.385
+SAL-3-3    0.943    1.000    0.367
+SAL-3-4    0.385    0.367    1.000
+
+### tramites_pca · Trámites empresariales — variable única estandarizada (candidato v7, solo diagnóstico) ###
+Método: variable única estandarizada (z-score) — NO es PCA real,
+        no hay matriz multivariada para componente principal ni KMO/Bartlett.
+Columnas: ['NEG-1-1']
+N observaciones válidas: 231
+(KMO/Bartlett no aplican: se requieren >=2 variables)
+
+### institucional_productivo_pca · Capacidad institucional-productiva (excluido del modelo desde v9 — solo diagnóstico) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['INS-2-1', 'FIN-1-4', 'NEG-2-2', 'NEG-2-3', 'TAM-1-1']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.7412
+KMO global: 0.8587
+KMO por variable:
+INS-2-1    0.8029
+FIN-1-4    0.9293
+NEG-2-2    0.8455
+NEG-2-3    0.9123
+TAM-1-1    0.8321
+Bartlett: chi2=794.1768  p=3.685e-164
+Cargas factoriales (ancladas):
+INS-2-1    0.480948
+FIN-1-4    0.429394
+NEG-2-2    0.433778
+NEG-2-3    0.451874
+TAM-1-1    0.438129
+Correlaciones internas:
+         INS-2-1  FIN-1-4  NEG-2-2  NEG-2-3  TAM-1-1
+INS-2-1    1.000    0.685    0.750    0.752    0.780
+FIN-1-4    0.685    1.000    0.633    0.642    0.611
+NEG-2-2    0.750    0.633    1.000    0.661    0.554
+NEG-2-3    0.752    0.642    0.661    1.000    0.682
+TAM-1-1    0.780    0.611    0.554    0.682    1.000
+
+### infraestructura_amplia_pca · Infraestructura territorial — Variante C (vial completo + servicios + conectividad, candidato v7, solo diagnóstico) ###
+Método: Promedio ponderado por carga²
+Columnas: ['INF-2-1', 'INF-2-2', 'INF-2-3', 'INF-2-4', 'INF-2-5', 'INF-2-6', 'INF-1-1', 'INF-1-2', 'INF-1-3', 'INF-1-5', 'INF-1-4', 'INF-3-1', 'INF-3-2', 'INF-3-3', 'INF-3-4']
+Invertidas (×-1 antes de estandarizar): ['INF-1-4', 'INF-3-1', 'INF-3-2']
+N observaciones válidas: 175
+Varianza explicada (CP1): 0.3261
+KMO global: 0.6614
+KMO por variable:
+INF-2-1    0.7131
+INF-2-2    0.7059
+INF-2-3    0.7299
+INF-2-4    0.3821
+INF-2-5    0.6580
+INF-2-6    0.8895
+INF-1-1    0.6501
+INF-1-2    0.6771
+INF-1-3    0.5499
+INF-1-5    0.7408
+INF-1-4    0.7039
+INF-3-1    0.5021
+INF-3-2    0.5247
+INF-3-3    0.6861
+INF-3-4    0.7831
+Bartlett: chi2=1844.2172  p=0
+Cargas factoriales (ancladas):
+INF-2-1   -0.295561
+INF-2-2    0.337339
+INF-2-3    0.166069
+INF-2-4    0.080586
+INF-2-5    0.309923
+INF-2-6    0.250938
+INF-1-1    0.408758
+INF-1-2    0.281776
+INF-1-3    0.264752
+INF-1-5    0.368944
+INF-1-4    0.164580
+INF-3-1    0.004382
+INF-3-2    0.013770
+INF-3-3    0.212163
+INF-3-4    0.284162
+Correlaciones internas:
+         INF-2-1  INF-2-2  INF-2-3  INF-2-4  INF-2-5  INF-2-6  INF-1-1  INF-1-2  INF-1-3  INF-1-5  INF-1-4  INF-3-1  INF-3-2  INF-3-3  INF-3-4
+INF-2-1    1.000   -0.295   -0.481    0.176   -0.306   -0.348   -0.281   -0.349   -0.119   -0.173    0.028    0.029   -0.040   -0.422   -0.558
+INF-2-2   -0.295    1.000    0.105    0.211    0.878    0.157    0.339    0.377    0.395    0.356   -0.228    0.093    0.099    0.142    0.263
+INF-2-3   -0.481    0.105    1.000   -0.098    0.169    0.301    0.199    0.362    0.043    0.164    0.072   -0.042   -0.035    0.177    0.249
+INF-2-4    0.176    0.211   -0.098    1.000    0.352    0.145    0.294    0.081    0.181    0.345   -0.226   -0.030   -0.050   -0.171   -0.142
+INF-2-5   -0.306    0.878    0.169    0.352    1.000    0.195    0.284    0.264    0.314    0.341   -0.190    0.164    0.169    0.125    0.228
+INF-2-6   -0.348    0.157    0.301    0.145    0.195    1.000    0.391    0.378    0.280    0.311   -0.136   -0.086   -0.101    0.218    0.304
+INF-1-1   -0.281    0.339    0.199    0.294    0.284    0.391    1.000    0.598    0.706    0.875   -0.499    0.001   -0.059    0.320    0.480
+INF-1-2   -0.349    0.377    0.362    0.081    0.264    0.378    0.598    1.000    0.190    0.496   -0.129   -0.159   -0.237    0.198    0.340
+INF-1-3   -0.119    0.395    0.043    0.181    0.314    0.280    0.706    0.190    1.000    0.652   -0.478    0.195    0.121    0.195    0.358
+INF-1-5   -0.173    0.356    0.164    0.345    0.341    0.311    0.875    0.496    0.652    1.000   -0.601    0.157    0.064    0.381    0.507
+INF-1-4    0.028   -0.228    0.072   -0.226   -0.190   -0.136   -0.499   -0.129   -0.478   -0.601    1.000    0.061    0.147   -0.306   -0.381
+INF-3-1    0.029    0.093   -0.042   -0.030    0.164   -0.086    0.001   -0.159    0.195    0.157    0.061    1.000    0.921    0.201    0.081
+INF-3-2   -0.040    0.099   -0.035   -0.050    0.169   -0.101   -0.059   -0.237    0.121    0.064    0.147    0.921    1.000    0.142    0.025
+INF-3-3   -0.422    0.142    0.177   -0.171    0.125    0.218    0.320    0.198    0.195    0.381   -0.306    0.201    0.142    1.000    0.846
+INF-3-4   -0.558    0.263    0.249   -0.142    0.228    0.304    0.480    0.340    0.358    0.507   -0.381    0.081    0.025    0.846    1.000
+
+### tic_puro_pca · Adopción tecnológica (TIC) — aislado de educación (candidato v7, solo diagnóstico) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['TIC-1-1', 'TIC-1-2', 'TIC-1-4', 'TIC-2-1', 'TIC-2-2', 'TIC-2-3']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.6843
+KMO global: 0.8175
+KMO por variable:
+TIC-1-1    0.8226
+TIC-1-2    0.8231
+TIC-1-4    0.8190
+TIC-2-1    0.7959
+TIC-2-2    0.7738
+TIC-2-3    0.9348
+Bartlett: chi2=1126.3326  p=1.076e-230
+Cargas factoriales (ancladas):
+TIC-1-1    0.456176
+TIC-1-2    0.298694
+TIC-1-4    0.412796
+TIC-2-1    0.442644
+TIC-2-2    0.455127
+TIC-2-3    0.359458
+Correlaciones internas:
+         TIC-1-1  TIC-1-2  TIC-1-4  TIC-2-1  TIC-2-2  TIC-2-3
+TIC-1-1    1.000    0.560    0.811    0.784    0.822    0.539
+TIC-1-2    0.560    1.000    0.482    0.337    0.451    0.330
+TIC-1-4    0.811    0.482    1.000    0.688    0.653    0.461
+TIC-2-1    0.784    0.337    0.688    1.000    0.892    0.629
+TIC-2-2    0.822    0.451    0.653    0.892    1.000    0.665
+TIC-2-3    0.539    0.330    0.461    0.629    0.665    1.000
+
+### educacion_basica_pca · Educación básica y media — cobertura y calidad (candidato v7, solo diagnóstico) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['EDU-1-1', 'EDU-1-2', 'EDU-1-3', 'EDU-1-4', 'EDU-1-5', 'EDU-2-1', 'EDU-2-2', 'EDU-2-3', 'EDU-2-4']
+Invertidas (×-1 antes de estandarizar): ['EDU-1-5', 'EDU-2-4']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.5867
+KMO global: 0.7286
+KMO por variable:
+EDU-1-1    0.7650
+EDU-1-2    0.6715
+EDU-1-3    0.7248
+EDU-1-4    0.7337
+EDU-1-5    0.7057
+EDU-2-1    0.7197
+EDU-2-2    0.6837
+EDU-2-3    0.8848
+EDU-2-4    0.5403
+Bartlett: chi2=2658.2594  p=0
+Cargas factoriales (ancladas):
+EDU-1-1    0.342193
+EDU-1-2    0.337281
+EDU-1-3    0.410408
+EDU-1-4    0.411377
+EDU-1-5    0.133709
+EDU-2-1    0.381527
+EDU-2-2    0.359476
+EDU-2-3    0.349151
+EDU-2-4    0.130033
+Correlaciones internas:
+         EDU-1-1  EDU-1-2  EDU-1-3  EDU-1-4  EDU-1-5  EDU-2-1  EDU-2-2  EDU-2-3  EDU-2-4
+EDU-1-1    1.000    0.857    0.736    0.705   -0.275    0.540    0.474    0.449   -0.104
+EDU-1-2    0.857    1.000    0.820    0.713   -0.318    0.469    0.395    0.404   -0.122
+EDU-1-3    0.736    0.820    1.000    0.958   -0.363    0.741    0.662    0.666   -0.244
+EDU-1-4    0.705    0.713    0.958    1.000   -0.352    0.800    0.714    0.719   -0.199
+EDU-1-5   -0.275   -0.318   -0.363   -0.352    1.000   -0.105    0.002   -0.120   -0.033
+EDU-2-1    0.540    0.469    0.741    0.800   -0.105    1.000    0.975    0.763   -0.196
+EDU-2-2    0.474    0.395    0.662    0.714    0.002    0.975    1.000    0.777   -0.264
+EDU-2-3    0.449    0.404    0.666    0.719   -0.120    0.763    0.777    1.000   -0.378
+EDU-2-4   -0.104   -0.122   -0.244   -0.199   -0.033   -0.196   -0.264   -0.378    1.000
+
+### educacion_superior_pca · Educación superior y formación para el trabajo (candidato v7, solo diagnóstico) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['EDS-1-1', 'EDS-1-2', 'EDS-1-3', 'EDS-2-1', 'EDS-2-2', 'EDS-2-3', 'EDS-2-4', 'EDS-3-1', 'EDS-3-2']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.5233
+KMO global: 0.7930
+KMO por variable:
+EDS-1-1    0.8145
+EDS-1-2    0.8102
+EDS-1-3    0.8522
+EDS-2-1    0.8624
+EDS-2-2    0.4474
+EDS-2-3    0.7725
+EDS-2-4    0.7586
+EDS-3-1    0.6834
+EDS-3-2    0.8233
+Bartlett: chi2=1317.5038  p=1.933e-253
+Cargas factoriales (ancladas):
+EDS-1-1    0.371900
+EDS-1-2    0.381940
+EDS-1-3    0.365254
+EDS-2-1    0.357087
+EDS-2-2    0.059744
+EDS-2-3    0.279796
+EDS-2-4    0.420402
+EDS-3-1    0.283200
+EDS-3-2    0.340729
+Correlaciones internas:
+         EDS-1-1  EDS-1-2  EDS-1-3  EDS-2-1  EDS-2-2  EDS-2-3  EDS-2-4  EDS-3-1  EDS-3-2
+EDS-1-1    1.000    0.793    0.553    0.666   -0.119    0.509    0.649    0.332    0.396
+EDS-1-2    0.793    1.000    0.652    0.664    0.046    0.419    0.660    0.254    0.521
+EDS-1-3    0.553    0.652    1.000    0.545    0.057    0.215    0.713    0.424    0.652
+EDS-2-1    0.666    0.664    0.545    1.000    0.019    0.498    0.556    0.379    0.420
+EDS-2-2   -0.119    0.046    0.057    0.019    1.000    0.020    0.178    0.250    0.204
+EDS-2-3    0.509    0.419    0.215    0.498    0.020    1.000    0.535    0.343    0.320
+EDS-2-4    0.649    0.660    0.713    0.556    0.178    0.535    1.000    0.687    0.740
+EDS-3-1    0.332    0.254    0.424    0.379    0.250    0.343    0.687    1.000    0.412
+EDS-3-2    0.396    0.521    0.652    0.420    0.204    0.320    0.740    0.412    1.000
+
+### ds_ingles_pca · Dominio de inglés — variable única estandarizada (candidato v7, solo diagnóstico) ###
+Método: variable única estandarizada (z-score) — NO es PCA real,
+        no hay matriz multivariada para componente principal ni KMO/Bartlett.
+Columnas: ['EDS-2-4']
+N observaciones válidas: 231
+(KMO/Bartlett no aplican: se requieren >=2 variables)
+
+### salud_resultados_pca · Salud — resultados poblacionales (candidato v7, solo diagnóstico) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['SAL-2-1', 'SAL-2-2', 'SAL-2-3']
+Invertidas (×-1 antes de estandarizar): ['SAL-2-1', 'SAL-2-2']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.6376
+KMO global: 0.6547
+KMO por variable:
+SAL-2-1    0.6174
+SAL-2-2    0.7040
+SAL-2-3    0.6628
+Bartlett: chi2=137.1121  p=1.585e-29
+Cargas factoriales (ancladas):
+SAL-2-1    0.611967
+SAL-2-2    0.546840
+SAL-2-3    0.571368
+Correlaciones internas:
+         SAL-2-1  SAL-2-2  SAL-2-3
+SAL-2-1    1.000    0.473   -0.525
+SAL-2-2    0.473    1.000   -0.367
+SAL-2-3   -0.525   -0.367    1.000
+
+### salud_calidad_pca · Salud — calidad y capacidad instalada (candidato v7, solo diagnóstico, amplía a salud_oferta_pca con SAL-3-1) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['SAL-3-1', 'SAL-3-2', 'SAL-3-3', 'SAL-3-4']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.6408
+KMO global: 0.5813
+KMO por variable:
+SAL-3-1    0.6118
+SAL-3-2    0.5541
+SAL-3-3    0.5931
+SAL-3-4    0.6038
+Bartlett: chi2=695.7390  p=5.087e-147
+Cargas factoriales (ancladas):
+SAL-3-1    0.448264
+SAL-3-2    0.607478
+SAL-3-3    0.587534
+SAL-3-4    0.291264
+Correlaciones internas:
+         SAL-3-1  SAL-3-2  SAL-3-3  SAL-3-4
+SAL-3-1    1.000    0.632    0.532    0.014
+SAL-3-2    0.632    1.000    0.943    0.385
+SAL-3-3    0.532    0.943    1.000    0.367
+SAL-3-4    0.014    0.385    0.367    1.000
+
+### laboral_ampliado_pca · Mercado laboral ampliado — excl. LAB-1-3 por circularidad con la variable dependiente (candidato v7, solo diagnóstico) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['LAB-1-1', 'LAB-1-2', 'LAB-1-4', 'LAB-1-5']
+Invertidas (×-1 antes de estandarizar): ['LAB-1-2', 'LAB-1-4', 'LAB-1-5']
+N observaciones válidas: 230
+Varianza explicada (CP1): 0.3517
+KMO global: 0.2470
+KMO por variable:
+LAB-1-1    0.2636
+LAB-1-2    0.2185
+LAB-1-4    0.2861
+LAB-1-5    0.1838
+Bartlett: chi2=134.2132  p=1.665e-26
+Cargas factoriales (ancladas):
+LAB-1-1   -0.629191
+LAB-1-2    0.134565
+LAB-1-4    0.755643
+LAB-1-5    0.122537
+Correlaciones internas:
+         LAB-1-1  LAB-1-2  LAB-1-4  LAB-1-5
+LAB-1-1    1.000   -0.198    0.393   -0.115
+LAB-1-2   -0.198    1.000    0.269   -0.198
+LAB-1-4    0.393    0.269    1.000    0.196
+LAB-1-5   -0.115   -0.198    0.196    1.000
+
+### financiero_pca · Sistema financiero — cobertura y profundización (candidato v7, solo diagnóstico, amplía FIN-1-4 ya usado en institucional_productivo_pca) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['FIN-1-1', 'FIN-1-2', 'FIN-1-3', 'FIN-1-4']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.6133
+KMO global: 0.6599
+KMO por variable:
+FIN-1-1    0.4568
+FIN-1-2    0.7682
+FIN-1-3    0.6431
+FIN-1-4    0.6405
+Bartlett: chi2=452.4192  p=1.48e-94
+Cargas factoriales (ancladas):
+FIN-1-1    0.198025
+FIN-1-2    0.540362
+FIN-1-3    0.574670
+FIN-1-4    0.581850
+Correlaciones internas:
+         FIN-1-1  FIN-1-2  FIN-1-3  FIN-1-4
+FIN-1-1    1.000    0.358    0.070    0.093
+FIN-1-2    0.358    1.000    0.607    0.629
+FIN-1-3    0.070    0.607    1.000    0.848
+FIN-1-4    0.093    0.629    0.848    1.000
+
+### mercado_pca · Tamaño de mercado — interno y externo (candidato v7, solo diagnóstico, amplía TAM-1-1 ya usado en institucional_productivo_pca; v6 había descartado TAM-2 por riesgo de colinealidad within con TAM-1-1, aquí se mide explícitamente) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['TAM-1-1', 'TAM-2-1', 'TAM-2-2']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.6947
+KMO global: 0.6356
+KMO por variable:
+TAM-1-1    0.6214
+TAM-2-1    0.5917
+TAM-2-2    0.7609
+Bartlett: chi2=222.4941  p=5.802e-48
+Cargas factoriales (ancladas):
+TAM-1-1    0.589688
+TAM-2-1    0.622820
+TAM-2-2    0.514164
+Correlaciones internas:
+         TAM-1-1  TAM-2-1  TAM-2-2
+TAM-1-1    1.000    0.696    0.401
+TAM-2-1    0.696    1.000    0.516
+TAM-2-2    0.401    0.516    1.000
+
+### negocios_estructura_pca · Estructura y dinamismo empresarial — concentración sectorial y registro (candidato v7, solo diagnóstico) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['NEG-1-2', 'NEG-1-3', 'NEG-2-1']
+Invertidas (×-1 antes de estandarizar): ['NEG-1-2', 'NEG-1-3']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.4289
+KMO global: 0.5210
+KMO por variable:
+NEG-1-2    0.5514
+NEG-1-3    0.5188
+NEG-2-1    0.5141
+Bartlett: chi2=16.3007  p=0.0009839
+Cargas factoriales (ancladas):
+NEG-1-2    0.423421
+NEG-1-3    0.602702
+NEG-2-1    0.676362
+Correlaciones internas:
+         NEG-1-2  NEG-1-3  NEG-2-1
+NEG-1-2    1.000    0.048   -0.137
+NEG-1-3    0.048    1.000   -0.226
+NEG-2-1   -0.137   -0.226    1.000
+
+### sofisticacion_pca · Sofisticación y diversificación exportadora (candidato v7, sin precedente en v3-v6, solo diagnóstico) ###
+Método: PCA puro (cargas fijas en pool, signo anclado)
+Columnas: ['SOF-1-1', 'SOF-1-2']
+Invertidas (×-1 antes de estandarizar): ['SOF-1-1', 'SOF-1-2']
+N observaciones válidas: 231
+Varianza explicada (CP1): 0.8057
+KMO global: 0.5000
+KMO por variable:
+SOF-1-1    0.5
+SOF-1-2    0.5
+Bartlett: chi2=106.9472  p=4.572e-25
+Cargas factoriales (ancladas):
+SOF-1-1    0.707107
+SOF-1-2    0.707107
+Correlaciones internas:
+         SOF-1-1  SOF-1-2
+SOF-1-1    1.000    0.611
+SOF-1-2    0.611    1.000
+
+======================================================================
+COMPARACIÓN — Infraestructura territorial: A vs B: Variante A (vial) (actual) vs Variante B (vial+servicios) (candidato)
+======================================================================
+                                    Variante A (vial)    Variante B (vial+servicios)
+------------------------------ ---------------------- ------------------------------
+KMO global                                     0.5000                         0.7070
+Bartlett p-value                            2.366e-68                     2.236e-166
+Varianza explicada (CP1)                       0.9388                         0.5510
+N variables                                         2                              7
+N obs. válidas                                    210                            189
+
+KMO por variable — Variante B (vial+servicios) (variables nuevas resaltadas):
+  INF-2-2     : 0.7635
+  INF-2-5     : 0.6993
+  INF-1-1     : 0.6835  <- variable nueva
+  INF-1-2     : 0.5938  <- variable nueva
+  INF-1-3     : 0.6088  <- variable nueva
+  INF-1-5     : 0.8015  <- variable nueva
+  INF-1-4     : 0.7879  <- variable nueva
+
+------------------------------------------------------------
+RECOMENDACIÓN (basada en regla de decisión, NO aplicada automáticamente):
+------------------------------------------------------------
+  -> Mantener Variante A (vial) en el modelo: la varianza explicada cae más de un 20%.
+
+======================================================================
+COMPARACIÓN — Infraestructura territorial: A vs C (v7, pilar teórico amplio): Variante A (vial) (actual) vs Variante C (Pilar 3 completo) (candidato)
+======================================================================
+                                    Variante A (vial)  Variante C (Pilar 3 completo)
+------------------------------ ---------------------- ------------------------------
+KMO global                                     0.5000                         0.6614
+Bartlett p-value                            2.366e-68                              0
+Varianza explicada (CP1)                       0.9388                         0.3261
+N variables                                         2                             15
+N obs. válidas                                    210                            175
+
+KMO por variable — Variante C (Pilar 3 completo) (variables nuevas resaltadas):
+  INF-2-1     : 0.7131  <- variable nueva
+  INF-2-2     : 0.7059
+  INF-2-3     : 0.7299  <- variable nueva
+  INF-2-4     : 0.3821  <- variable nueva  [!] KMO < 0.50
+  INF-2-5     : 0.6580
+  INF-2-6     : 0.8895  <- variable nueva
+  INF-1-1     : 0.6501  <- variable nueva
+  INF-1-2     : 0.6771  <- variable nueva
+  INF-1-3     : 0.5499  <- variable nueva
+  INF-1-5     : 0.7408  <- variable nueva
+  INF-1-4     : 0.7039  <- variable nueva
+  INF-3-1     : 0.5021  <- variable nueva
+  INF-3-2     : 0.5247  <- variable nueva
+  INF-3-3     : 0.6861  <- variable nueva
+  INF-3-4     : 0.7831  <- variable nueva
+
+------------------------------------------------------------
+RECOMENDACIÓN (basada en regla de decisión, NO aplicada automáticamente):
+------------------------------------------------------------
+  -> Mantener Variante A (vial) en el modelo: alguna variable nueva tiene KMO<0.50, la varianza explicada cae más de un 20%.
+
+######################################################################
+# COMPARACIONES v7 — bloques actuales del modelo vs. pilares teóricos
+######################################################################
+
+======================================================================
+COMPARACIÓN — Pilar 1: institucional puro (actual v9.1) vs institucional-productivo (anterior v8): Actual (INS puro 5 vars, v9.1) (actual) vs Anterior (institucional+mercado, v8) (candidato)
+======================================================================
+                               Actual (INS puro 5 vars, v9.1) Anterior (institucional+mercado, v8)
+------------------------------ ---------------------- ------------------------------
+KMO global                                     0.7698                         0.8587
+Bartlett p-value                           1.494e-116                     3.685e-164
+Varianza explicada (CP1)                       0.6045                         0.7412
+N variables                                         5                              5
+N obs. válidas                                    231                            231
+
+KMO por variable — Anterior (institucional+mercado, v8) (variables nuevas resaltadas):
+  INS-2-1     : 0.8029
+  FIN-1-4     : 0.9293  <- variable nueva
+  NEG-2-2     : 0.8455  <- variable nueva
+  NEG-2-3     : 0.9123  <- variable nueva
+  TAM-1-1     : 0.8321  <- variable nueva
+
+------------------------------------------------------------
+RECOMENDACIÓN (basada en regla de decisión, NO aplicada automáticamente):
+------------------------------------------------------------
+  -> Anterior (institucional+mercado, v8) parece preferible: KMO global mejora, las variables
+    nuevas tienen KMO>=0.50, y la varianza explicada no cae más de un 20%
+    respecto a Actual (INS puro 5 vars, v9.1). Considerar promover a VARS_MODELO.
+
+======================================================================
+COMPARACIÓN — Pilar 4: capital humano+digital (actual) vs TIC puro (candidato): Actual (TIC+educación fusionados) (actual) vs Pilar 4 puro (solo TIC) (candidato)
+======================================================================
+                               Actual (TIC+educación fusionados)        Pilar 4 puro (solo TIC)
+------------------------------ ---------------------- ------------------------------
+KMO global                                     0.8990                         0.8175
+Bartlett p-value                                    0                     1.076e-230
+Varianza explicada (CP1)                       0.6955                         0.6843
+N variables                                         9                              6
+N obs. válidas                                    231                            231
+
+------------------------------------------------------------
+RECOMENDACIÓN (basada en regla de decisión, NO aplicada automáticamente):
+------------------------------------------------------------
+  -> Mantener Actual (TIC+educación fusionados) en el modelo: el KMO global no mejora (o el candidato no tiene KMO válido).
+
+======================================================================
+COMPARACIÓN — Pilar 6: laboral (actual) vs laboral ampliado (candidato): Actual (LAB-1-1, LAB-1-2) (actual) vs Pilar 6 ampliado (+subocupación+vulnerable) (candidato)
+======================================================================
+                               Actual (LAB-1-1, LAB-1-2) Pilar 6 ampliado (+subocupación+vulnerable)
+------------------------------ ---------------------- ------------------------------
+KMO global                                     0.5000                         0.2470
+Bartlett p-value                             0.002474                      1.665e-26
+Varianza explicada (CP1)                       0.5991                         0.3517
+N variables                                         2                              4
+N obs. válidas                                    231                            230
+
+KMO por variable — Pilar 6 ampliado (+subocupación+vulnerable) (variables nuevas resaltadas):
+  LAB-1-1     : 0.2636  [!] KMO < 0.50
+  LAB-1-2     : 0.2185  [!] KMO < 0.50
+  LAB-1-4     : 0.2861  <- variable nueva  [!] KMO < 0.50
+  LAB-1-5     : 0.1838  <- variable nueva  [!] KMO < 0.50
+
+------------------------------------------------------------
+RECOMENDACIÓN (basada en regla de decisión, NO aplicada automáticamente):
+------------------------------------------------------------
+  -> Mantener Actual (LAB-1-1, LAB-1-2) en el modelo: el KMO global no mejora (o el candidato no tiene KMO válido), alguna variable nueva tiene KMO<0.50, la varianza explicada cae más de un 20%.
+
+------------------------------------------------------------
+NOTA — Pilar 6: sistema financiero ampliado (financiero_pca)
+------------------------------------------------------------
+  KMO global: 0.6599  Varianza explicada: 0.6133
+  FIN-1-4 (única variable financiera en el modelo actual) no tiene
+  KMO propio fuera de su fusión en institucional_productivo_pca.
+  Evaluar si financiero_pca debe reemplazar a FIN-1-4 dentro de ese bloque,
+  o entrar como regresor independiente del Pilar 6.
+
+------------------------------------------------------------
+NOTA — Pilar 6: tamaño de mercado ampliado (mercado_pca)
+------------------------------------------------------------
+  KMO global: 0.6356  Varianza explicada: 0.6947
+  TAM-1-1 (única variable de mercado en el modelo actual) no tiene
+  KMO propio fuera de su fusión en institucional_productivo_pca.
+  v6 descartó TAM-2-1/TAM-2-2 por riesgo de colinealidad within con
+  TAM-1-1 — revisar si ese riesgo se confirma con el KMO/within de aquí.
+
+======================================================================
+EVALUACIÓN DE CANDIDATOS v7 — nuevos determinantes potenciales
+======================================================================
+
+────────────────────────────────────────────────────────────
+VARIACIÓN WITHIN — candidatos v7 vs regresores actuales
+────────────────────────────────────────────────────────────
+(Referencia: institucional_productivo_pca≈0.23 e 
+ infraestructura_territorial_pca≈0.07 ya muestran within bajo
+ y coeficientes inestables/no significativos en FE.)
+
+  capital_humano_digital_pca          0.571769 (en el modelo)
+  infraestructura_territorial_pca     0.067940 (en el modelo)  ⚠ within muy bajo
+  laboral_pca                         0.670853 (en el modelo)
+  innovacion_pca                      0.455686 (en el modelo)
+  salud_cobertura_pca                 1.054234 ← candidato v7
+  salud_oferta_pca                    0.289023 ← candidato v7
+  tramites_pca                        0.254299 ← candidato v7
+  infraestructura_amplia_pca          0.088197 ← candidato v7  ⚠ within muy bajo
+  tic_puro_pca                        0.551863 ← candidato v7
+  educacion_basica_pca                0.313167 ← candidato v7
+  educacion_superior_pca              0.352779 ← candidato v7
+  ds_ingles_pca                       0.398051 ← candidato v7
+  salud_resultados_pca                0.485325 ← candidato v7
+  salud_calidad_pca                   0.340095 ← candidato v7
+  laboral_ampliado_pca                0.571057 ← candidato v7
+  financiero_pca                      0.285756 ← candidato v7
+  mercado_pca                         0.288251 ← candidato v7
+  negocios_estructura_pca             0.534462 ← candidato v7
+  sofisticacion_pca                   0.362981 ← candidato v7
+
+────────────────────────────────────────────────────────────
+VALIDEZ FACTORIAL — candidatos v7 (solo bloques con ≥2 variables)
+────────────────────────────────────────────────────────────
+  salud_cobertura_pca      : KMO=0.4213  var.explicada=0.6507  Bartlett p=1.649e-63  🔴 KMO<0.50 (inaceptable)
+  salud_oferta_pca         : KMO=0.5688  var.explicada=0.7274  Bartlett p=1.076e-116  🟡 KMO marginal (0.50-0.60)
+  tramites_pca             : KMO/Bartlett no aplica (variable única o falló el cálculo)
+  infraestructura_amplia_pca: KMO=0.6614  var.explicada=0.3261  Bartlett p=0  🟢 KMO aceptable
+  tic_puro_pca             : KMO=0.8175  var.explicada=0.6843  Bartlett p=1.076e-230  🟢 KMO aceptable
+  educacion_basica_pca     : KMO=0.7286  var.explicada=0.5867  Bartlett p=0  🟢 KMO aceptable
+  educacion_superior_pca   : KMO=0.7930  var.explicada=0.5233  Bartlett p=1.933e-253  🟢 KMO aceptable
+  ds_ingles_pca            : KMO/Bartlett no aplica (variable única o falló el cálculo)
+  salud_resultados_pca     : KMO=0.6547  var.explicada=0.6376  Bartlett p=1.585e-29  🟢 KMO aceptable
+  salud_calidad_pca        : KMO=0.5813  var.explicada=0.6408  Bartlett p=5.087e-147  🟡 KMO marginal (0.50-0.60)
+  laboral_ampliado_pca     : KMO=0.2470  var.explicada=0.3517  Bartlett p=1.665e-26  🔴 KMO<0.50 (inaceptable)
+  financiero_pca           : KMO=0.6599  var.explicada=0.6133  Bartlett p=1.48e-94  🟢 KMO aceptable
+  mercado_pca              : KMO=0.6356  var.explicada=0.6947  Bartlett p=5.802e-48  🟢 KMO aceptable
+  negocios_estructura_pca  : KMO=0.5210  var.explicada=0.4289  Bartlett p=0.0009839  🟡 KMO marginal (0.50-0.60)
+  sofisticacion_pca        : KMO=0.5000  var.explicada=0.8057  Bartlett p=4.572e-25  🟡 KMO marginal (0.50-0.60)
+
+────────────────────────────────────────────────────────────
+LECTURA SUGERIDA (decisión manual, no aplicada al modelo)
+────────────────────────────────────────────────────────────
+  salud_cobertura_pca: within razonable (1.0542) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  salud_oferta_pca: within razonable (0.2890) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  tramites_pca: within razonable (0.2543) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  infraestructura_amplia_pca: within muy bajo (0.0882) — probablemente no aportará
+    identificación adicional en FE, por la misma razón que
+    infraestructura_territorial_pca ya muestra coeficiente inestable.
+  tic_puro_pca: within razonable (0.5519) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  educacion_basica_pca: within razonable (0.3132) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  educacion_superior_pca: within razonable (0.3528) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  ds_ingles_pca: within razonable (0.3981) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  salud_resultados_pca: within razonable (0.4853) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  salud_calidad_pca: within razonable (0.3401) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  laboral_ampliado_pca: within razonable (0.5711) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  financiero_pca: within razonable (0.2858) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  mercado_pca: within razonable (0.2883) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  negocios_estructura_pca: within razonable (0.5345) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+  sofisticacion_pca: within razonable (0.3630) — candidato viable para incorporar
+    si la teoría y el KMO (cuando aplique) lo respaldan.
+
+### Estadística descriptiva ###
+       informalidad  capital_humano_digital_pca  infraestructura_territorial_pca   laboral_pca  innovacion_pca
+count    230.000000                2.310000e+02                     2.100000e+02  2.310000e+02    2.310000e+02
+mean      69.775747                2.460754e-16                     6.767074e-17  3.268189e-16   -9.227828e-17
+std       11.656241                2.507415e+00                     9.712531e-01  1.097012e+00    2.199733e+00
+min       37.971721               -5.065516e+00                    -9.028326e-01 -4.498153e+00   -2.612017e+00
+25%       62.752933               -1.638928e+00                    -6.051996e-01 -5.743350e-01   -1.406489e+00
+50%       71.138761               -1.722635e-01                    -3.284857e-01  7.266040e-02   -6.232594e-01
+75%       79.523319                1.786616e+00                     1.041773e-01  6.238943e-01    1.131485e+00
+max       89.478260                7.673028e+00                     3.512876e+00  2.542047e+00    7.449096e+00
+
+### VIF y Tolerancia ###
+                       Variable      VIF  Tolerancia
+                          const 1.010632    0.989480
+     capital_humano_digital_pca 2.804876    0.356522
+infraestructura_territorial_pca 1.382828    0.723156
+                    laboral_pca 1.005696    0.994336
+                 innovacion_pca 2.830209    0.353331
+
+### Pooled OLS ###
+                          PooledOLS Estimation Summary                          
+================================================================================
+Dep. Variable:           informalidad   R-squared:                        0.3905
+Estimator:                  PooledOLS   R-squared (Between):              0.4206
+No. Observations:                 209   R-squared (Within):               0.0500
+Date:                Sun, Jun 28 2026   R-squared (Overall):              0.3905
+Time:                        16:50:25   Log-likelihood                   -742.23
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                      32.669
+Entities:                          30   P-value                           0.0000
+Avg Obs:                       6.9667   Distribution:                   F(4,204)
+Min Obs:                       6.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             32.669
+                                        P-value                           0.0000
+Time periods:                       7   Distribution:                   F(4,204)
+Avg Obs:                       29.857                                           
+Min Obs:                       29.000                                           
+Max Obs:                       30.000                                           
+                                                                                
+                                        Parameter Estimates                                        
+===================================================================================================
+                                 Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+---------------------------------------------------------------------------------------------------
+const                               70.786     0.5940     119.18     0.0000      69.615      71.957
+capital_humano_digital_pca          0.8091     0.4728     1.7115     0.0885     -0.1230      1.7412
+infraestructura_territorial_pca    -5.0496     0.7433    -6.7934     0.0000     -6.5152     -3.5840
+laboral_pca                        -0.5112     0.5362    -0.9533     0.3416     -1.5684      0.5461
+innovacion_pca                     -2.2891     0.5350    -4.2789     0.0000     -3.3439     -1.2343
+===================================================================================================
+
+### Fixed Effects ###
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:           informalidad   R-squared:                        0.3588
+Estimator:                   PanelOLS   R-squared (Between):              0.2667
+No. Observations:                 209   R-squared (Within):               0.3588
+Date:                Sun, Jun 28 2026   R-squared (Overall):              0.2718
+Time:                        16:50:25   Log-likelihood                   -417.40
+Cov. Estimator:                Robust                                           
+                                        F-statistic:                      24.484
+Entities:                          30   P-value                           0.0000
+Avg Obs:                       6.9667   Distribution:                   F(4,175)
+Min Obs:                       6.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             19.787
+                                        P-value                           0.0000
+Time periods:                       7   Distribution:                   F(4,175)
+Avg Obs:                       29.857                                           
+Min Obs:                       29.000                                           
+Max Obs:                       30.000                                           
+                                                                                
+                                        Parameter Estimates                                        
+===================================================================================================
+                                 Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+---------------------------------------------------------------------------------------------------
+const                               71.078     0.1355     524.68     0.0000      70.811      71.346
+capital_humano_digital_pca         -1.4253     0.2762    -5.1600     0.0000     -1.9704     -0.8801
+infraestructura_territorial_pca    -1.3875     1.0949    -1.2672     0.2068     -3.5484      0.7735
+laboral_pca                        -0.8682     0.2176    -3.9900     0.0001     -1.2977     -0.4388
+innovacion_pca                     -1.0811     0.2892    -3.7385     0.0003     -1.6519     -0.5104
+===================================================================================================
+
+F-test for Poolability: 129.06
+P-value: 0.0000
+Distribution: F(29,175)
+
+Included effects: Entity
+
+### Random Effects ###
+                        RandomEffects Estimation Summary                        
+================================================================================
+Dep. Variable:           informalidad   R-squared:                        0.3414
+Estimator:              RandomEffects   R-squared (Between):              0.3040
+No. Observations:                 209   R-squared (Within):               0.3563
+Date:                Sun, Jun 28 2026   R-squared (Overall):              0.3024
+Time:                        16:50:25   Log-likelihood                   -434.40
+Cov. Estimator:                Robust                                           
+                                        F-statistic:                      26.441
+Entities:                          30   P-value                           0.0000
+Avg Obs:                       6.9667   Distribution:                   F(4,204)
+Min Obs:                       6.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             25.499
+                                        P-value                           0.0000
+Time periods:                       7   Distribution:                   F(4,204)
+Avg Obs:                       29.857                                           
+Min Obs:                       29.000                                           
+Max Obs:                       30.000                                           
+                                                                                
+                                        Parameter Estimates                                        
+===================================================================================================
+                                 Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+---------------------------------------------------------------------------------------------------
+const                               70.943     1.6379     43.313     0.0000      67.714      74.172
+capital_humano_digital_pca         -1.3375     0.2724    -4.9092     0.0000     -1.8747     -0.8003
+infraestructura_territorial_pca    -2.2893     1.0720    -2.1356     0.0339     -4.4029     -0.1757
+laboral_pca                        -0.8658     0.2054    -4.2149     0.0000     -1.2708     -0.4608
+innovacion_pca                     -1.1243     0.2655    -4.2347     0.0000     -1.6478     -0.6009
+===================================================================================================
+
+### Comparación FE vs RE ###
+                           Model Comparison                           
+======================================================================
+                                                  FE                RE
+----------------------------------------------------------------------
+Dep. Variable                           informalidad      informalidad
+Estimator                                   PanelOLS     RandomEffects
+No. Observations                                 209               209
+Cov. Est.                                     Robust            Robust
+R-squared                                     0.3588            0.3414
+R-Squared (Within)                            0.3588            0.3563
+R-Squared (Between)                           0.2667            0.3040
+R-Squared (Overall)                           0.2718            0.3024
+F-statistic                                   24.484            26.441
+P-value (F-stat)                              0.0000            0.0000
+=================================     ==============   ===============
+const                                         71.078            70.943
+                                            (524.68)          (43.313)
+capital_humano_digital_pca                   -1.4253           -1.3375
+                                           (-5.1600)         (-4.9092)
+infraestructura_territorial_pca              -1.3875           -2.2893
+                                           (-1.2672)         (-2.1356)
+laboral_pca                                  -0.8682           -0.8658
+                                           (-3.9900)         (-4.2149)
+innovacion_pca                               -1.0811           -1.1243
+                                           (-3.7385)         (-4.2347)
+=================================== ================ =================
+Effects                                       Entity                  
+----------------------------------------------------------------------
+
+T-stats reported in parentheses
+
+Hausman chi2: -23.5792, p-value: 1.0000
+
+### Mundlak Test (RE con promedios grupales) ###
+                        RandomEffects Estimation Summary                        
+================================================================================
+Dep. Variable:           informalidad   R-squared:                        0.3607
+Estimator:              RandomEffects   R-squared (Between):              0.4264
+No. Observations:                 209   R-squared (Within):               0.3588
+Date:                Sun, Jun 28 2026   R-squared (Overall):              0.4074
+Time:                        16:50:25   Log-likelihood                   -432.47
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                      14.108
+Entities:                          30   P-value                           0.0000
+Avg Obs:                       6.9667   Distribution:                   F(8,200)
+Min Obs:                       6.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             14.606
+                                        P-value                           0.0000
+Time periods:                       7   Distribution:                   F(8,200)
+Avg Obs:                       29.857                                           
+Min Obs:                       29.000                                           
+Max Obs:                       30.000                                           
+                                                                                
+                                          Parameter Estimates                                           
+========================================================================================================
+                                      Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+--------------------------------------------------------------------------------------------------------
+const                                    70.659     1.5827     44.644     0.0000      67.538      73.780
+capital_humano_digital_pca              -1.4251     0.2747    -5.1872     0.0000     -1.9668     -0.8833
+infraestructura_territorial_pca         -1.3934     1.1887    -1.1722     0.2425     -3.7374      0.9505
+laboral_pca                             -0.8707     0.2159    -4.0328     0.0001     -1.2965     -0.4450
+innovacion_pca                          -1.0817     0.3225    -3.3542     0.0010     -1.7177     -0.4458
+capital_humano_digital_pca_mean          2.7411     1.4037     1.9527     0.0522     -0.0269      5.5091
+infraestructura_territorial_pca_mean    -4.1681     2.2875    -1.8221     0.0699     -8.6788      0.3427
+laboral_pca_mean                         0.7899     1.7817     0.4433     0.6580     -2.7235      4.3033
+innovacion_pca_mean                     -1.5207     1.5893    -0.9569     0.3398     -4.6546      1.6131
+========================================================================================================
+
+Mundlak — Test conjunto (Wald) de medias grupales:
+   chi2(4) = 6.3915   p-value = 0.1718
+   → No se rechaza H0: medias grupales conjuntamente no significativas.
+     Evidencia a favor de Random Effects.
+
+### Modelo sugerido para diagnóstico: RE ###
+(Basado en Hausman + test conjunto de Mundlak; si ambos coinciden en no rechazar H0, se usa RE por ser más eficiente; si alguno rechaza, FE.)
+
+### Exportación de base final ###
+Filas: 231  |  Columnas: 7
+Generado: 2026-06-28 16:50:25
+CSV base final: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\base_final\panel_macro_final.csv
+CSV diccionario de variables: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\base_final\diccionario_panel_macro_final.csv
+
+######################################################################
+# PRUEBA DE CANDIDATOS SELECCIONADOS COMO REGRESORES ADICIONALES
+# (uno a la vez sobre el modelo base de 5 regresores — v8)
+######################################################################
+
+======================================================================
+PRUEBA DE REGRESOR ADICIONAL: institucional_productivo_pca
+======================================================================
+Modelo base (5 regresores actuales) + institucional_productivo_pca
+N obs. válidas tras dropna conjunto: 210
+
+VIF (modelo base + candidato):
+                       Variable      VIF  Tolerancia
+                          const 1.013973    0.986219
+     capital_humano_digital_pca 3.261980    0.306562
+infraestructura_territorial_pca 1.558880    0.641486
+                    laboral_pca 1.049839    0.952527
+                 innovacion_pca 3.414478    0.292871
+   institucional_productivo_pca 3.692973    0.270785
+  🟢 VIF del candidato (3.69) OK (≤5).
+
+Coeficiente de institucional_productivo_pca en cada modelo:
+Modelo     Coef.  Std.Err.  p-value Signo Sig. (5%)
+Pooled -2.062695  0.704617 0.003808     −       ***
+    FE  0.685732  0.656787 0.297901     +          
+    RE  0.332452  0.648602 0.608811     +          
+
+Estabilidad de signo entre Pooled/FE/RE: INESTABLE (cambia de signo)
+Significativo en FE (p<0.05): No
+Significativo en RE (p<0.05): No
+
+────────────────────────────────────────────────────────────
+LECTURA SUGERIDA (decisión manual, no aplicada al modelo)
+────────────────────────────────────────────────────────────
+  → Señal de alerta tipo criminalidad_pca/justicia_pca (v4): el efecto
+    between (Pooled) no coincide con el efecto within (FE). Descartar
+    como candidato a regresor, salvo evidencia adicional muy fuerte.
+
+======================================================================
+PRUEBA DE REGRESOR ADICIONAL: tramites_pca
+======================================================================
+Modelo base (5 regresores actuales) + tramites_pca
+N obs. válidas tras dropna conjunto: 210
+
+VIF (modelo base + candidato):
+                       Variable      VIF  Tolerancia
+                          const 1.011636    0.988498
+     capital_humano_digital_pca 2.838599    0.352286
+infraestructura_territorial_pca 1.560688    0.640743
+                    laboral_pca 1.133451    0.882261
+                 innovacion_pca 2.922338    0.342192
+                   tramites_pca 1.308247    0.764382
+  🟢 VIF del candidato (1.31) OK (≤5).
+
+Coeficiente de tramites_pca en cada modelo:
+Modelo     Coef.  Std.Err.  p-value Signo Sig. (5%)
+Pooled -2.627678  0.740214 0.000479     −       ***
+    FE -0.690829  0.744247 0.354577     −          
+    RE -0.585233  0.674364 0.386512     −          
+
+Estabilidad de signo entre Pooled/FE/RE: ESTABLE (mismo signo en los 3)
+Significativo en FE (p<0.05): No
+Significativo en RE (p<0.05): No
+
+────────────────────────────────────────────────────────────
+LECTURA SUGERIDA (decisión manual, no aplicada al modelo)
+────────────────────────────────────────────────────────────
+  → Signo estable pero no significativo ni en FE ni en RE. Mismo patrón
+    que institucional_productivo_pca/infraestructura_territorial_pca ya
+    muestran: dirección teóricamente razonable, pero el panel actual no
+    tiene suficiente variación within para identificarlo con confianza.
+
+======================================================================
+PRUEBA DE REGRESOR ADICIONAL: tejido_empresarial_pca
+======================================================================
+Modelo base (5 regresores actuales) + tejido_empresarial_pca
+N obs. válidas tras dropna conjunto: 210
+
+VIF (modelo base + candidato):
+                       Variable      VIF  Tolerancia
+                          const 1.011906    0.988234
+     capital_humano_digital_pca 2.815365    0.355194
+infraestructura_territorial_pca 2.066996    0.483794
+                    laboral_pca 1.068266    0.936097
+                 innovacion_pca 3.203020    0.312205
+         tejido_empresarial_pca 2.827754    0.353638
+  🟢 VIF del candidato (2.83) OK (≤5).
+
+Coeficiente de tejido_empresarial_pca en cada modelo:
+Modelo     Coef.  Std.Err.      p-value Signo Sig. (5%)
+Pooled -5.951658  0.793830 1.982636e-12     −       ***
+    FE -1.270310  0.857187 1.401616e-01     −          
+    RE -2.075080  0.865659 1.743136e-02     −       ***
+
+Estabilidad de signo entre Pooled/FE/RE: ESTABLE (mismo signo en los 3)
+Significativo en FE (p<0.05): No
+Significativo en RE (p<0.05): Sí
+
+────────────────────────────────────────────────────────────
+LECTURA SUGERIDA (decisión manual, no aplicada al modelo)
+────────────────────────────────────────────────────────────
+  → Signo estable y significativo en RE. Candidato
+    viable para promover a VARS_MODELO — confirmar también con VIF y con
+    el resto de diagnósticos (Hausman/Mundlak) antes de decidir.
+
+======================================================================
+RESUMEN — candidatos probados como regresor adicional
+======================================================================
+                   Candidato Signo estable Sig. FE Sig. RE      VIF
+institucional_productivo_pca            No      No      No 3.692973
+                tramites_pca            Sí      No      No 1.308247
+      tejido_empresarial_pca            Sí      No      Sí 2.827754
+
+======================================================================
+DIAGNÓSTICOS DEL MODELO — RE
+======================================================================
+
+────────────────────────────────────────────────────────────
+HOMOCEDASTICIDAD — Test de Breusch-Pagan (modelo RE)
+────────────────────────────────────────────────────────────
+  LM stat       : 7.263843
+  p-value (LM)  : 0.122585  (homocedasticidad no rechazada)
+  F stat        : 1.836339
+  p-value (F)   : 0.123185
+  Interpretación: No se rechaza homocedasticidad (p≥0.05).
+
+────────────────────────────────────────────────────────────
+NORMALIDAD DE RESIDUOS — Test de Anderson-Darling (modelo RE)
+────────────────────────────────────────────────────────────
+  Estadístico   : 0.701895
+  p-value       : 0.065956  (normalidad no rechazada)
+  Interpretación: No se rechaza normalidad (p≥0.05).
+
+────────────────────────────────────────────────────────────
+MULTICOLINEALIDAD — VIF y Tolerancia
+────────────────────────────────────────────────────────────
+  Variable                                 VIF  Tolerancia  Semáforo
+  ----------------------------------- --------  ----------  ---------------
+  capital_humano_digital_pca            2.8049      0.3565  🟢 OK (≤5)
+  infraestructura_territorial_pca       1.3828      0.7232  🟢 OK (≤5)
+  laboral_pca                           1.0057      0.9943  🟢 OK (≤5)
+  innovacion_pca                        2.8302      0.3533  🟢 OK (≤5)
+
+────────────────────────────────────────────────────────────
+SELECCIÓN DE MODELO — Hausman + Mundlak
+────────────────────────────────────────────────────────────
+  Hausman chi²  : -23.579249
+  Hausman p-val : 1.000000  → RE preferido
+  Mundlak Wald  : 6.391546
+  Mundlak p-val : 0.171753  → RE preferido
+  Modelo elegido: RE
+
+────────────────────────────────────────────────────────────
+VARIACIÓN WITHIN — std promedio dentro de cada departamento
+────────────────────────────────────────────────────────────
+  capital_humano_digital_pca          0.571769
+  infraestructura_territorial_pca     0.067940
+  laboral_pca                         0.670853
+  innovacion_pca                      0.455686
+
+======================================================================
+ARCHIVOS DE GRÁFICAS GENERADOS
+======================================================================
+  → Guardada: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\01_correlaciones.png
+  → Guardada: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\02_vif.png
+  → Guardada: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\03_resid_vs_ajustados.png
+  → Guardada: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\04_histograma_residuos.png
+  → Guardada: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\05_resid_vs_capital_humano_digital_pca.png
+  → Guardada: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\06_resid_vs_infraestructura_territorial_pca.png
+  → Guardada: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\07_resid_vs_laboral_pca.png
+  → Guardada: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\08_resid_vs_innovacion_pca.png
+  → Guardada: C:\Users\david\OneDrive\Desktop\TODO\Investigación\Forma macro\Resultados macro\09_evolucion_temporal.png
+
+======================================================================
+FIN DEL REPORTE DE DIAGNÓSTICO
+======================================================================

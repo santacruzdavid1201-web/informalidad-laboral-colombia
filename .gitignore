@@ -1,0 +1,4 @@
+data/raw/*
+data/processed/*.csv
+*.pbix
+__pycache__/
