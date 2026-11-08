@@ -3,6 +3,16 @@ GEIH 2022–2025 — Base única filtrable por año
 Trimestre 2 (Abril, Mayo, Junio)
 Merge por ['DIRECTORIO', 'SECUENCIA_P', 'ORDEN'] dentro de cada período
 
+Versión v18 (validación y benchmark; la especificación del modelo NO cambia):
+  - Validación cruzada de 5 particiones estratificada y agrupada por hogar
+    (StratifiedGroupKFold por DIRECTORIO, shuffle=True, random_state=42) del
+    probit simple, con el umbral de Youden calculado solo en entrenamiento.
+  - Benchmark con la misma matriz de diseño y las mismas particiones:
+    Logit (sklearn), HistGradientBoosting y RandomForest, con tiempos de
+    entrenamiento y permutation importance (1ª partición) para los árboles.
+  - Resumen final en el log. Las gráficas se guardan sin abrir ventanas
+    (backend Agg), para que la ejecución no se bloquee en plt.show().
+
 Versión v17 (corrección de la muestra de la 1ª etapa y de la definición de ocupado):
   - CLASE, DPTO y FEX_C18 se leen del módulo cgsse (todas las personas) y no
     del módulo de ocupados. Antes, CLASE quedaba en NaN para los no ocupados,
@@ -42,15 +52,24 @@ Versión v16 (SE robustos por clúster de hogar, sin Murphy-Topel):
 [El resto del docstring de versiones anteriores se conserva igual]
 """
 
-import os, glob, warnings, sys, datetime, time
+import os, glob, warnings, sys, datetime, time, re
 import pandas as pd
 import numpy as np
 import scipy.stats as stats
+import matplotlib
+matplotlib.use("Agg")   # v18: solo guardar figuras; plt.show() bloqueaba la ejecución
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from statsmodels.stats.outliers_influence import variance_inflation_factor
-from sklearn.metrics import roc_curve, auc, confusion_matrix, ConfusionMatrixDisplay
+from sklearn.metrics import roc_curve, auc, roc_auc_score, confusion_matrix, ConfusionMatrixDisplay
+from sklearn.model_selection import StratifiedGroupKFold
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
+from sklearn.inspection import permutation_importance
 
 warnings.filterwarnings("ignore", category=pd.errors.DtypeWarning)
 
@@ -834,8 +853,173 @@ def diagnostico(probit, ocupados):
 
     ruta_grafico = os.path.join(OUTPUT_DIR, "diagnostico_probit.png")
     plt.savefig(ruta_grafico, dpi=150, bbox_inches="tight")
-    plt.show()
+    plt.close(fig)
     print(f"\nPanel combinado guardado como: {ruta_grafico}")
+    return roc_auc
+
+# ─── VALIDACIÓN CRUZADA Y BENCHMARK (v18) ────────────────────────────────────
+
+def _corto(nombre):
+    """C(EDUCACION_CAT, Treatment(reference='...'))[T.2_Secundaria] -> EDUCACION_CAT[2_Secundaria]"""
+    return re.sub(r"C\((\w+), Treatment\(reference='[^']*'\)\)\[T\.([^\]]+)\]", r"\1[\2]", nombre)
+
+
+def _umbral_youden(y, p):
+    fpr, tpr, thr = roc_curve(y, p)
+    return thr[np.argmax(tpr - fpr)]
+
+
+def _metricas(y, p, umbral):
+    tn, fp, fn, tp = confusion_matrix(y, (p >= umbral).astype(int), labels=[0, 1]).ravel()
+    return {"Umbral": umbral, "AUC": roc_auc_score(y, p),
+            "Exactitud": (tp + tn) / len(y), "Precisión": tp / (tp + fp),
+            "Recall": tp / (tp + fn), "Especificidad": tn / (tn + fp)}
+
+
+def _tabla_media_de(cv, cols):
+    g = cv.groupby("Modelo", sort=False)[cols]
+    m, s = g.mean(), g.std()
+    fmt = {c: (".1f" if c == "Tiempo (s)" else ".4f") for c in cols}
+    return pd.DataFrame({c: [f"{a:{fmt[c]}} ± {b:{fmt[c]}}" for a, b in zip(m[c], s[c])]
+                         for c in cols}, index=m.index)
+
+
+class _ProbitSM:
+    """Probit de statsmodels con la interfaz fit / predict_proba de sklearn."""
+    def fit(self, X, y):
+        self.m = sm.Probit(y, X).fit(disp=0)
+        return self
+
+    def predict_proba(self, X):
+        p = self.m.predict(X)
+        return np.column_stack([1 - p, p])
+
+
+def _importancia_permutacion(est, X_te, y_te, nombres, me_probit, n_rep=5):
+    # Si el costo estimado (1 predicción × variables × repeticiones) supera 2 min,
+    # se usa una submuestra aleatoria de 50.000 filas de la partición de prueba.
+    t0 = time.perf_counter()
+    est.predict_proba(X_te)
+    costo = (time.perf_counter() - t0) * X_te.shape[1] * n_rep
+    nota = f"partición de prueba completa ({len(y_te):,} filas)"
+    if costo > 120 and len(y_te) > 50_000:
+        idx = np.random.default_rng(42).choice(len(y_te), 50_000, replace=False)
+        X_te, y_te = X_te[idx], y_te[idx]
+        nota = f"submuestra de 50.000 filas (costo estimado completo: {costo:.0f} s)"
+    t0 = time.perf_counter()
+    pi = permutation_importance(est, X_te, y_te, scoring="roc_auc",
+                                n_repeats=n_rep, random_state=42)
+    tabla = pd.DataFrame({
+        "Variable": [_corto(n) for n in nombres],
+        "Caída AUC (media)": pi.importances_mean,
+        "Caída AUC (d.e.)": pi.importances_std,
+        "EM probit (dy/dx)": me_probit.reindex(nombres).values,
+    }).sort_values("Caída AUC (media)", ascending=False).head(10)
+    tabla.index = range(1, len(tabla) + 1)
+    return tabla, f"{nota}; {n_rep} repeticiones; {time.perf_counter() - t0:.0f} s"
+
+
+def validacion_cruzada(probit, mfx, ocupados):
+    print("\n" + "=" * 80)
+    print("── VALIDACIÓN CRUZADA (5 particiones, StratifiedGroupKFold por hogar) Y BENCHMARK ──")
+    print("=" * 80)
+    print("   Nota metodológica: la validación cruzada se hace con el PROBIT SIMPLE (sin IMR).")
+    print("   El IMR no usa INFORMAL (no hay fuga de la variable objetivo), pero su 1ª etapa")
+    print("   se estimó con toda la PET, incluidas las personas de cada partición de prueba;")
+    print("   validarlo sin fuga exigiría reestimar la 1ª etapa dentro de cada partición. Además,")
+    print("   el Heckman sirve para la inferencia (coeficientes consistentes bajo selección), no")
+    print("   para la predicción, y los modelos de benchmark no usan IMR. El Heckman se mantiene")
+    print("   para la inferencia (ver 2ª etapa arriba).")
+    print("   - Particiones agrupadas por DIRECTORIO: ningún hogar queda a la vez en")
+    print("     entrenamiento y prueba. Estratificadas por INFORMAL. shuffle=True, random_state=42.")
+    print("   - Todos los modelos usan la misma matriz de diseño del probit (mismas variables,")
+    print("     dummies y categorías de referencia) y las mismas particiones.")
+    print("   - Umbral de Youden calculado SOLO con las predicciones de entrenamiento de cada")
+    print("     partición y aplicado a la de prueba. En los modelos de árboles las predicciones")
+    print("     de entrenamiento son algo optimistas, lo que puede desplazar ese umbral.")
+    print("   - Tiempo = segundos de entrenamiento (fit) por partición; RF y HGB usan varios núcleos.")
+
+    X, y = probit.model.exog, probit.model.endog.astype(int)
+    X_sk = X[:, 1:]                               # sin intercepto para sklearn
+    nombres = probit.model.exog_names[1:]
+    grupos = ocupados.loc[probit.model.data.row_labels, "DIRECTORIO"].to_numpy()
+    me_probit = mfx.summary_frame()["dy/dx"]
+
+    modelos = {
+        "Probit": (_ProbitSM(), X),
+        "Logit (sklearn)": (make_pipeline(StandardScaler(),
+                                          LogisticRegression(C=np.inf, max_iter=2000)), X_sk),
+        "HistGradientBoosting": (HistGradientBoostingClassifier(random_state=42), X_sk),
+        "RandomForest": (RandomForestClassifier(n_estimators=200, max_depth=12,
+                                                min_samples_leaf=50, n_jobs=-1,
+                                                random_state=42), X_sk),
+    }
+    print(f"\n   N = {len(y):,} ocupados | {len(np.unique(grupos)):,} hogares (DIRECTORIO) | "
+          f"% informal = {y.mean():.1%}")
+
+    filas, importancias = [], {}
+    skf = StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=42)
+    for i, (tr, te) in enumerate(skf.split(X_sk, y, grupos), 1):
+        assert len(np.intersect1d(grupos[tr], grupos[te])) == 0, "hogar en train y test"
+        print(f"\n   Partición {i}: entrenamiento {len(tr):,} | prueba {len(te):,} "
+              f"(% informal prueba = {y[te].mean():.1%})")
+        for nombre, (est, M) in modelos.items():
+            t0 = time.perf_counter()
+            est.fit(M[tr], y[tr])
+            t_fit = time.perf_counter() - t0
+            umbral = _umbral_youden(y[tr], est.predict_proba(M[tr])[:, 1])
+            met = _metricas(y[te], est.predict_proba(M[te])[:, 1], umbral)
+            filas.append({"Modelo": nombre, "Partición": i, **met, "Tiempo (s)": t_fit})
+            print(f"      {nombre:<22} AUC={met['AUC']:.4f}  umbral={umbral:.4f}  "
+                  f"fit={t_fit:.1f}s")
+            if i == 1 and nombre in ("HistGradientBoosting", "RandomForest"):
+                importancias[nombre] = _importancia_permutacion(est, M[te], y[te],
+                                                                nombres, me_probit)
+
+    cv = pd.DataFrame(filas)
+    cols = ["AUC", "Exactitud", "Precisión", "Recall", "Especificidad", "Umbral", "Tiempo (s)"]
+    with pd.option_context("display.width", 200, "display.max_columns", 20):
+        print("\n── Resultados por partición (métricas en la partición de prueba) ──")
+        print(cv.round(4).to_string(index=False))
+        print("\n── Promedio ± desviación estándar (5 particiones) ──")
+        print(_tabla_media_de(cv, cols).to_string())
+
+        for nombre, (tabla, nota) in importancias.items():
+            print(f"\n── Permutation importance — {nombre} (partición 1; {nota}) ──")
+            print("   Caída del AUC al permutar cada variable; EM probit = efecto marginal")
+            print("   promedio del probit simple en toda la muestra, como referencia.")
+            print(tabla.to_string(float_format=lambda v: f"{v:+.4f}"))
+
+    ruta_cv = os.path.join(OUTPUT_DIR, "validacion_cruzada.csv")
+    cv.to_csv(ruta_cv, index=False, encoding="utf-8-sig")
+    print(f"\nResultados de la validación cruzada guardados en: {ruta_cv}")
+    return cv
+
+
+def imprimir_resumen(probit, mfx, probit_heck, mfx_heck, auc_in, cv, ocupados):
+    sec = "C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.2_Secundaria]"
+    sup = sec.replace("2_Secundaria", "3_Superior")
+    me, me_h = mfx.summary_frame(), mfx_heck.summary_frame()
+    auc_cv = cv.loc[cv["Modelo"] == "Probit", "AUC"]
+
+    print("\n" + "=" * 80)
+    print("── RESUMEN FINAL (v18) ──")
+    print("=" * 80)
+    print(f"   N muestra final (probit / 2ª etapa Heckman): {int(probit.nobs):,} / {int(probit_heck.nobs):,}")
+    print(f"   % informalidad en la muestra final:          {probit.model.endog.mean():.1%}"
+          f"   (todos los ocupados ≥ 15 años: {ocupados['INFORMAL'].mean():.1%}, N = {len(ocupados):,})")
+    print(f"   Pseudo R² — probit simple: {probit.prsquared:.4f} | Heckman: {probit_heck.prsquared:.4f}")
+    print("\n   Efectos marginales promedio de la educación (dy/dx, ref.: primaria o menos; e.e. entre paréntesis)")
+    print(f"   {'':<12}{'Probit simple':>22}{'Heckman (2ª etapa)':>24}")
+    for etiqueta, var in [("Secundaria", sec), ("Superior", sup)]:
+        print(f"   {etiqueta:<12}{me.loc[var, 'dy/dx']:>+12.4f} ({me.loc[var, 'Std. Err.']:.4f})"
+              f"{me_h.loc[var, 'dy/dx']:>+14.4f} ({me_h.loc[var, 'Std. Err.']:.4f})")
+    print("   Nota: el EM del Heckman es el efecto DIRECTO con el IMR fijo; no incluye el canal")
+    print("   indirecto de la educación a través de la ecuación de selección (1ª etapa).")
+    print(f"\n   AUC del probit simple — dentro de muestra: {auc_in:.4f} | "
+          f"VC 5 particiones: {auc_cv.mean():.4f} ± {auc_cv.std():.4f}")
+    print("\n   Benchmark (mismas variables, mismas 5 particiones agrupadas por hogar):")
+    print(_tabla_media_de(cv, ["AUC", "Tiempo (s)"]).to_string())
 
 # ─── TABLAS DE ESTADÍSTICA DESCRIPTIVA (MICRO) ───────────────────────────────
 
@@ -1176,6 +1360,7 @@ def guardar_resultados_txt(probit, mfx, probit_sel, probit_heck, mfx_heck):
         f.write("   06_residuos_vs_prob.png\n")
         f.write("   07_estabilidad_por_anio.png\n")
         f.write(f"Reporte de robustez (con SE cluster-robust): {os.path.join(OUTPUT_DIR, 'reporte_robustez.txt')}\n")
+        f.write(f"Validación cruzada y benchmark (CSV): {os.path.join(OUTPUT_DIR, 'validacion_cruzada.csv')}\n")
         f.write("\nEl log completo de TODO lo impreso durante esta ejecución\n")
         f.write("(lectura por año/mes, verificación de variables, VIF, Hosmer-\n")
         f.write("Lemeshow, ROC, diagnóstico IMR, etc.) está en un archivo separado\n")
@@ -1464,9 +1649,13 @@ if __name__ == "__main__":
 
         modelos_rob = correr_analisis_robustez(ocupados_heck)
 
-        diagnostico(probit, ocupados)
+        auc_in = diagnostico(probit, ocupados)
+
+        cv = validacion_cruzada(probit, mfx, ocupados)
 
         guardar_resultados_txt(probit, mfx, probit_sel, probit_heck, mfx_heck)
+
+        imprimir_resumen(probit, mfx, probit_heck, mfx_heck, auc_in, cv, ocupados)
 
         print(f"\n── Ejecución completada sin errores ──")
 
