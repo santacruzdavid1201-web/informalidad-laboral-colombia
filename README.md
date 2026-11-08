@@ -77,21 +77,25 @@ Power BI Dashboard
 
 ### Interactive Power BI Dashboard
 
-*Dashboard overview*
+*Dashboard overview with regional informality map and sectoral composition.*
 
-![Dashboard](images/dashboard_overview.png)
+![Dashboard](dashboard/Dashboard.png)
 
-### Regional Informality Map
+### Macro Model Diagnostic
 
 *Department-level visualization of labor informality.*
 
-![Map](images/informality_map.png)
+![Residuals vs Fitted](figures/macro/03_resid_vs_ajustados.png)
 
-### Econometric Results
+![Temporal Evolution](figures/macro/09_evolucion_temporal.png)
 
-*Interactive visualization of macroeconomic determinants.*
+### Micro Model Diagnostics (Heckman Selection Model)
 
-![Results](images/model_results.png)
+*Model discrimination and goodness-of-fit for the Heckman probit specification.*
+
+![ROC Curve](figures/micro/03_curva_roc.png)
+
+![Confusion Matrix](figures/micro/05_matriz_confusion.png)
 
 ---
 
@@ -133,5 +137,5 @@ This repository is a public and simplified version of my undergraduate Economics
 
 **David Santacruz**
 
-* LinkedIn: *(add your profile)*
-* GitHub: *(add your profile)*
+* LinkedIn: *www.linkedin.com/in/david-esteban-santacruz-palacios-68b4b0367*
+* GitHub: *[(add your profile)](https://github.com/santacruzdavid1201-web)*
