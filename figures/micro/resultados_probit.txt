@@ -1,0 +1,285 @@
+RESULTADOS — PROBIT INFORMALIDAD GEIH 2022–2025
+======================================================================
+
+── PROBIT SIMPLE (sin corrección de selección) ──
+
+                          Probit Regression Results                           
+==============================================================================
+Dep. Variable:               INFORMAL   No. Observations:               366567
+Model:                         Probit   Df Residuals:                   366526
+Method:                           MLE   Df Model:                           40
+Date:                Sun, 08 Nov 2026   Pseudo R-squ.:                  0.3017
+Time:                        15:55:57   Log-Likelihood:            -1.6531e+05
+converged:                       True   LL-Null:                   -2.3673e+05
+Covariance Type:            nonrobust   LLR p-value:                     0.000
+=================================================================================================================================================
+                                                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                         0.7442      0.013     57.034      0.000       0.719       0.770
+C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.2_Secundaria]        -0.4796      0.009    -55.758      0.000      -0.496      -0.463
+C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.3_Superior]          -0.9175      0.010    -94.746      0.000      -0.937      -0.899
+C(HORAS_CAT, Treatment(reference='2_Completa_35a48'))[T.1_Parcial_Menos35]        1.4744      0.011    136.407      0.000       1.453       1.496
+C(HORAS_CAT, Treatment(reference='2_Completa_35a48'))[T.3_Sobretrabajo_Mas48]     0.4457      0.006     70.005      0.000       0.433       0.458
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.A_Agro]                        0.2176      0.014     15.998      0.000       0.191       0.244
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.B_Minas]                      -0.6170      0.026    -24.181      0.000      -0.667      -0.567
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.C_Manuf]                      -0.3564      0.010    -37.435      0.000      -0.375      -0.338
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.D_Energ]                      -1.4987      0.045    -33.037      0.000      -1.588      -1.410
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.E_Agua]                       -0.6455      0.025    -26.236      0.000      -0.694      -0.597
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.F_Constr]                      0.1102      0.011     10.155      0.000       0.089       0.131
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.H_Transp]                      0.1608      0.011     15.158      0.000       0.140       0.182
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.I_Aloj]                        0.1535      0.011     13.828      0.000       0.132       0.175
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.J_InfoCom]                    -0.7575      0.021    -36.731      0.000      -0.798      -0.717
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.K_Finan]                      -0.9021      0.020    -44.193      0.000      -0.942      -0.862
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.L_Inmob]                      -0.9731      0.023    -42.089      0.000      -1.018      -0.928
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.M_Prof]                        0.2515      0.015     16.553      0.000       0.222       0.281
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.N_Admin]                      -0.3573      0.013    -28.142      0.000      -0.382      -0.332
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.Otro]                         -0.5088      0.012    -42.405      0.000      -0.532      -0.485
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.P_Educ]                       -1.0730      0.013    -83.832      0.000      -1.098      -1.048
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.Q_Salud]                      -0.6396      0.012    -54.263      0.000      -0.663      -0.617
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.R_Entret]                     -0.1045      0.023     -4.637      0.000      -0.149      -0.060
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.S_OtrosServ]                   0.6200      0.015     42.011      0.000       0.591       0.649
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.T_Hogar]                       0.2664      0.017     15.988      0.000       0.234       0.299
+MUJER                                                                            -0.0039      0.006     -0.655      0.512      -0.016       0.008
+MUJER_CUIDADO                                                                     0.0545      0.012      4.466      0.000       0.031       0.078
+TRANS                                                                             0.2106      0.087      2.434      0.015       0.041       0.380
+NO_HETERO                                                                        -0.0292      0.022     -1.333      0.183      -0.072       0.014
+ETNIA                                                                             0.2069      0.008     25.142      0.000       0.191       0.223
+CAMPESINO                                                                         0.0812      0.007     12.432      0.000       0.068       0.094
+SUBSIDIO_GOB                                                                      0.6397      0.015     43.171      0.000       0.611       0.669
+DESEA_CAMBIO                                                                      0.6930      0.007     95.755      0.000       0.679       0.707
+EDAD_C                                                                            0.0067      0.000     30.685      0.000       0.006       0.007
+EDAD2_C                                                                           0.0006   1.43e-05     45.393      0.000       0.001       0.001
+OCUPACION_CALIF                                                                   0.0923      0.007     13.402      0.000       0.079       0.106
+ZONA_RURAL                                                                        0.1812      0.011     16.865      0.000       0.160       0.202
+MIGRANTE_RECIENTE                                                                -0.0820      0.016     -5.068      0.000      -0.114      -0.050
+TASA_DEPENDENCIA                                                                 -0.1082      0.010    -10.691      0.000      -0.128      -0.088
+EN_PAREJA                                                                        -0.1027      0.005    -19.071      0.000      -0.113      -0.092
+TIENE_ING_NO_LAB                                                                 -0.2109      0.005    -39.728      0.000      -0.221      -0.201
+NACIDO_EXTRANJERO                                                                 0.7508      0.014     52.688      0.000       0.723       0.779
+=================================================================================================================================================
+
+       Probit Marginal Effects       
+=====================================
+Dep. Variable:               INFORMAL
+Method:                          dydx
+At:                           overall
+=================================================================================================================================================
+                                                                                   dy/dx    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.2_Secundaria]        -0.1221      0.002    -56.360      0.000      -0.126      -0.118
+C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.3_Superior]          -0.2335      0.002    -98.236      0.000      -0.238      -0.229
+C(HORAS_CAT, Treatment(reference='2_Completa_35a48'))[T.1_Parcial_Menos35]        0.3753      0.003    146.096      0.000       0.370       0.380
+C(HORAS_CAT, Treatment(reference='2_Completa_35a48'))[T.3_Sobretrabajo_Mas48]     0.1135      0.002     71.369      0.000       0.110       0.117
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.A_Agro]                        0.0554      0.003     16.012      0.000       0.049       0.062
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.B_Minas]                      -0.1570      0.006    -24.243      0.000      -0.170      -0.144
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.C_Manuf]                      -0.0907      0.002    -37.673      0.000      -0.095      -0.086
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.D_Energ]                      -0.3815      0.011    -33.172      0.000      -0.404      -0.359
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.E_Agua]                       -0.1643      0.006    -26.313      0.000      -0.177      -0.152
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.F_Constr]                      0.0281      0.003     10.159      0.000       0.023       0.033
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.H_Transp]                      0.0409      0.003     15.172      0.000       0.036       0.046
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.I_Aloj]                        0.0391      0.003     13.836      0.000       0.034       0.045
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.J_InfoCom]                    -0.1928      0.005    -36.954      0.000      -0.203      -0.183
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.K_Finan]                      -0.2296      0.005    -44.582      0.000      -0.240      -0.220
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.L_Inmob]                      -0.2477      0.006    -42.394      0.000      -0.259      -0.236
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.M_Prof]                        0.0640      0.004     16.569      0.000       0.056       0.072
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.N_Admin]                      -0.0909      0.003    -28.239      0.000      -0.097      -0.085
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.Otro]                         -0.1295      0.003    -42.762      0.000      -0.135      -0.124
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.P_Educ]                       -0.2731      0.003    -86.125      0.000      -0.279      -0.267
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.Q_Salud]                      -0.1628      0.003    -55.002      0.000      -0.169      -0.157
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.R_Entret]                     -0.0266      0.006     -4.637      0.000      -0.038      -0.015
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.S_OtrosServ]                   0.1578      0.004     42.285      0.000       0.150       0.165
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.T_Hogar]                       0.0678      0.004     15.997      0.000       0.059       0.076
+MUJER                                                                            -0.0010      0.002     -0.655      0.512      -0.004       0.002
+MUJER_CUIDADO                                                                     0.0139      0.003      4.466      0.000       0.008       0.020
+TRANS                                                                             0.0536      0.022      2.434      0.015       0.010       0.097
+NO_HETERO                                                                        -0.0074      0.006     -1.333      0.183      -0.018       0.004
+ETNIA                                                                             0.0527      0.002     25.204      0.000       0.049       0.057
+CAMPESINO                                                                         0.0207      0.002     12.439      0.000       0.017       0.024
+SUBSIDIO_GOB                                                                      0.1628      0.004     43.450      0.000       0.155       0.170
+DESEA_CAMBIO                                                                      0.1764      0.002     99.170      0.000       0.173       0.180
+EDAD_C                                                                            0.0017   5.52e-05     30.777      0.000       0.002       0.002
+EDAD2_C                                                                           0.0002   3.61e-06     45.726      0.000       0.000       0.000
+OCUPACION_CALIF                                                                   0.0235      0.002     13.412      0.000       0.020       0.027
+ZONA_RURAL                                                                        0.0461      0.003     16.881      0.000       0.041       0.051
+MIGRANTE_RECIENTE                                                                -0.0209      0.004     -5.068      0.000      -0.029      -0.013
+TASA_DEPENDENCIA                                                                 -0.0275      0.003    -10.696      0.000      -0.033      -0.022
+EN_PAREJA                                                                        -0.0261      0.001    -19.100      0.000      -0.029      -0.023
+TIENE_ING_NO_LAB                                                                 -0.0537      0.001    -39.977      0.000      -0.056      -0.051
+NACIDO_EXTRANJERO                                                                 0.1911      0.004     53.240      0.000       0.184       0.198
+=================================================================================================================================================
+
+======================================================================
+
+── PRIMERA ETAPA (selección / participación laboral) ──
+
+                          Probit Regression Results                           
+==============================================================================
+Dep. Variable:              PARTICIPA   No. Observations:               677861
+Model:                         Probit   Df Residuals:                   677848
+Method:                           MLE   Df Model:                           12
+Date:                Sun, 08 Nov 2026   Pseudo R-squ.:                  0.1624
+Time:                        15:55:57   Log-Likelihood:            -3.9168e+05
+converged:                       True   LL-Null:                   -4.6760e+05
+Covariance Type:            nonrobust   LLR p-value:                     0.000
+=============================================================================================================================================
+                                                                                coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                     0.6073      0.005    115.455      0.000       0.597       0.618
+C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.2_Secundaria]     0.0786      0.005     16.539      0.000       0.069       0.088
+C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.3_Superior]       0.2226      0.005     43.179      0.000       0.212       0.233
+CUIDADO_DEPENDIENTES                                                         -0.4143      0.009    -44.026      0.000      -0.433      -0.396
+ETNIA                                                                        -0.1110      0.005    -22.327      0.000      -0.121      -0.101
+CAMPESINO                                                                     0.0755      0.004     18.114      0.000       0.067       0.084
+SUBSIDIO_GOB                                                                 -0.2144      0.006    -35.481      0.000      -0.226      -0.203
+EDAD_C                                                                        0.0059      0.000     52.702      0.000       0.006       0.006
+EDAD2_C                                                                      -0.0019   6.14e-06   -309.314      0.000      -0.002      -0.002
+EN_PAREJA                                                                     0.0313      0.004      8.866      0.000       0.024       0.038
+ZONA_RURAL                                                                    0.0516      0.006      9.154      0.000       0.041       0.063
+MIGRANTE_RECIENTE                                                            -0.0537      0.010     -5.243      0.000      -0.074      -0.034
+NACIDO_EXTRANJERO                                                             0.2028      0.008     24.233      0.000       0.186       0.219
+=============================================================================================================================================
+
+======================================================================
+
+── SEGUNDA ETAPA (informalidad corregida por Heckman) ──
+   NOTA METODOLÓGICA: los errores estándar reportados abajo son
+   robustos, agrupados (cluster-robust) por hogar (DIRECTORIO),
+   lo que corrige la correlación intra-hogar en la muestra de
+   ocupados. No incorporan la incertidumbre de estimación del
+   IMR (regresor generado en la 1ra etapa), por lo que pueden
+   subestimar los errores estándar de la 2da etapa (Murphy &
+   Topel, 1985). Se reporta como limitación metodológica.
+
+                          Probit Regression Results                           
+==============================================================================
+Dep. Variable:               INFORMAL   No. Observations:               366567
+Model:                         Probit   Df Residuals:                   366525
+Method:                           MLE   Df Model:                           41
+Date:                Sun, 08 Nov 2026   Pseudo R-squ.:                  0.3021
+Time:                        15:55:57   Log-Likelihood:            -1.6522e+05
+converged:                       True   LL-Null:                   -2.3673e+05
+Covariance Type:              cluster   LLR p-value:                     0.000
+=================================================================================================================================================
+                                                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                         0.3320      0.036      9.155      0.000       0.261       0.403
+C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.2_Secundaria]        -0.4435      0.009    -48.629      0.000      -0.461      -0.426
+C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.3_Superior]          -0.8140      0.013    -62.944      0.000      -0.839      -0.789
+C(HORAS_CAT, Treatment(reference='2_Completa_35a48'))[T.1_Parcial_Menos35]        1.4706      0.011    136.401      0.000       1.449       1.492
+C(HORAS_CAT, Treatment(reference='2_Completa_35a48'))[T.3_Sobretrabajo_Mas48]     0.4454      0.007     67.009      0.000       0.432       0.458
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.A_Agro]                        0.2195      0.015     14.978      0.000       0.191       0.248
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.B_Minas]                      -0.6165      0.025    -24.730      0.000      -0.665      -0.568
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.C_Manuf]                      -0.3565      0.010    -37.072      0.000      -0.375      -0.338
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.D_Energ]                      -1.4983      0.048    -31.028      0.000      -1.593      -1.404
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.E_Agua]                       -0.6453      0.024    -26.615      0.000      -0.693      -0.598
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.F_Constr]                      0.1117      0.011      9.994      0.000       0.090       0.134
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.H_Transp]                      0.1630      0.011     15.115      0.000       0.142       0.184
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.I_Aloj]                        0.1537      0.012     13.154      0.000       0.131       0.177
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.J_InfoCom]                    -0.7571      0.022    -34.999      0.000      -0.799      -0.715
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.K_Finan]                      -0.9024      0.021    -43.420      0.000      -0.943      -0.862
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.L_Inmob]                      -0.9719      0.026    -38.057      0.000      -1.022      -0.922
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.M_Prof]                        0.2523      0.016     15.614      0.000       0.221       0.284
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.N_Admin]                      -0.3562      0.012    -29.103      0.000      -0.380      -0.332
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.Otro]                         -0.5084      0.013    -39.393      0.000      -0.534      -0.483
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.P_Educ]                       -1.0712      0.014    -75.707      0.000      -1.099      -1.043
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.Q_Salud]                      -0.6395      0.012    -52.116      0.000      -0.664      -0.615
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.R_Entret]                     -0.1033      0.024     -4.329      0.000      -0.150      -0.057
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.S_OtrosServ]                   0.6207      0.015     40.328      0.000       0.591       0.651
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.T_Hogar]                       0.2677      0.018     14.523      0.000       0.232       0.304
+MUJER                                                                            -0.0067      0.006     -1.143      0.253      -0.018       0.005
+MUJER_CUIDADO                                                                     0.0589      0.012      4.855      0.000       0.035       0.083
+TRANS                                                                             0.2095      0.086      2.431      0.015       0.041       0.378
+NO_HETERO                                                                        -0.0313      0.024     -1.329      0.184      -0.077       0.015
+ETNIA                                                                             0.1549      0.010     16.065      0.000       0.136       0.174
+CAMPESINO                                                                         0.1157      0.007     15.737      0.000       0.101       0.130
+SUBSIDIO_GOB                                                                      0.5348      0.017     30.937      0.000       0.501       0.569
+DESEA_CAMBIO                                                                      0.6917      0.008     92.051      0.000       0.677       0.706
+EDAD_C                                                                            0.0120      0.000     24.138      0.000       0.011       0.013
+EDAD2_C                                                                          -0.0003   8.06e-05     -4.258      0.000      -0.001      -0.000
+OCUPACION_CALIF                                                                   0.0919      0.007     12.923      0.000       0.078       0.106
+ZONA_RURAL                                                                        0.2048      0.012     17.163      0.000       0.181       0.228
+MIGRANTE_RECIENTE                                                                -0.1087      0.018     -6.193      0.000      -0.143      -0.074
+TASA_DEPENDENCIA                                                                 -0.0950      0.011     -8.792      0.000      -0.116      -0.074
+EN_PAREJA                                                                        -0.0848      0.006    -14.638      0.000      -0.096      -0.073
+TIENE_ING_NO_LAB                                                                 -0.2138      0.006    -37.407      0.000      -0.225      -0.203
+NACIDO_EXTRANJERO                                                                 0.8428      0.017     48.898      0.000       0.809       0.877
+IMR                                                                               0.8810      0.072     12.264      0.000       0.740       1.022
+=================================================================================================================================================
+
+       Probit Marginal Effects       
+=====================================
+Dep. Variable:               INFORMAL
+Method:                          dydx
+At:                           overall
+=================================================================================================================================================
+                                                                                   dy/dx    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.2_Secundaria]        -0.1128      0.002    -49.096      0.000      -0.117      -0.108
+C(EDUCACION_CAT, Treatment(reference='1_Primaria_Menos'))[T.3_Superior]          -0.2071      0.003    -63.946      0.000      -0.213      -0.201
+C(HORAS_CAT, Treatment(reference='2_Completa_35a48'))[T.1_Parcial_Menos35]        0.3742      0.003    146.877      0.000       0.369       0.379
+C(HORAS_CAT, Treatment(reference='2_Completa_35a48'))[T.3_Sobretrabajo_Mas48]     0.1133      0.002     68.636      0.000       0.110       0.117
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.A_Agro]                        0.0559      0.004     15.002      0.000       0.049       0.063
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.B_Minas]                      -0.1569      0.006    -24.784      0.000      -0.169      -0.144
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.C_Manuf]                      -0.0907      0.002    -37.275      0.000      -0.095      -0.086
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.D_Energ]                      -0.3812      0.012    -31.155      0.000      -0.405      -0.357
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.E_Agua]                       -0.1642      0.006    -26.700      0.000      -0.176      -0.152
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.F_Constr]                      0.0284      0.003     10.003      0.000       0.023       0.034
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.H_Transp]                      0.0415      0.003     15.137      0.000       0.036       0.047
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.I_Aloj]                        0.0391      0.003     13.173      0.000       0.033       0.045
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.J_InfoCom]                    -0.1926      0.005    -35.181      0.000      -0.203      -0.182
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.K_Finan]                      -0.2296      0.005    -43.712      0.000      -0.240      -0.219
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.L_Inmob]                      -0.2473      0.006    -38.348      0.000      -0.260      -0.235
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.M_Prof]                        0.0642      0.004     15.641      0.000       0.056       0.072
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.N_Admin]                      -0.0906      0.003    -29.232      0.000      -0.097      -0.085
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.Otro]                         -0.1293      0.003    -39.710      0.000      -0.136      -0.123
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.P_Educ]                       -0.2725      0.004    -77.816      0.000      -0.279      -0.266
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.Q_Salud]                      -0.1627      0.003    -52.743      0.000      -0.169      -0.157
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.R_Entret]                     -0.0263      0.006     -4.329      0.000      -0.038      -0.014
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.S_OtrosServ]                   0.1579      0.004     40.694      0.000       0.150       0.166
+C(RAMA_SECCION, Treatment(reference='G_Comerc'))[T.T_Hogar]                       0.0681      0.005     14.568      0.000       0.059       0.077
+MUJER                                                                            -0.0017      0.001     -1.143      0.253      -0.005       0.001
+MUJER_CUIDADO                                                                     0.0150      0.003      4.855      0.000       0.009       0.021
+TRANS                                                                             0.0533      0.022      2.431      0.015       0.010       0.096
+NO_HETERO                                                                        -0.0080      0.006     -1.329      0.184      -0.020       0.004
+ETNIA                                                                             0.0394      0.002     16.079      0.000       0.035       0.044
+CAMPESINO                                                                         0.0294      0.002     15.763      0.000       0.026       0.033
+SUBSIDIO_GOB                                                                      0.1361      0.004     31.016      0.000       0.127       0.145
+DESEA_CAMBIO                                                                      0.1760      0.002     95.801      0.000       0.172       0.180
+EDAD_C                                                                            0.0031      0.000     24.235      0.000       0.003       0.003
+EDAD2_C                                                                       -8.733e-05   2.05e-05     -4.259      0.000      -0.000   -4.71e-05
+OCUPACION_CALIF                                                                   0.0234      0.002     12.933      0.000       0.020       0.027
+ZONA_RURAL                                                                        0.0521      0.003     17.192      0.000       0.046       0.058
+MIGRANTE_RECIENTE                                                                -0.0277      0.004     -6.194      0.000      -0.036      -0.019
+TASA_DEPENDENCIA                                                                 -0.0242      0.003     -8.794      0.000      -0.030      -0.019
+EN_PAREJA                                                                        -0.0216      0.001    -14.649      0.000      -0.024      -0.019
+TIENE_ING_NO_LAB                                                                 -0.0544      0.001    -37.640      0.000      -0.057      -0.052
+NACIDO_EXTRANJERO                                                                 0.2144      0.004     49.488      0.000       0.206       0.223
+IMR                                                                               0.2241      0.018     12.279      0.000       0.188       0.260
+=================================================================================================================================================
+
+======================================================================
+
+── OTROS ARCHIVOS GENERADOS EN ESTA EJECUCIÓN ──
+
+Tablas de estadística descriptiva:
+   - Ocupados (CSV): C:\Users\david\OneDrive\Desktop\TODO\informalidad-laboral-colombia\figures\micro\tabla_descriptiva_ocupados.csv
+   - PET / Selección (CSV): C:\Users\david\OneDrive\Desktop\TODO\informalidad-laboral-colombia\figures\micro\tabla_descriptiva_pet_seleccion.csv
+   - Reporte consolidado (TXT): C:\Users\david\OneDrive\Desktop\TODO\informalidad-laboral-colombia\figures\micro\tablas_estadistica_descriptiva.txt
+
+Panel combinado de diagnóstico: C:\Users\david\OneDrive\Desktop\TODO\informalidad-laboral-colombia\figures\micro\diagnostico_probit.png
+Gráficas individuales (carpeta): C:\Users\david\OneDrive\Desktop\TODO\informalidad-laboral-colombia\figures\micro\graficas
+   01_vif.png
+   02_distribucion_probabilidades.png
+   03_curva_roc.png
+   04_hosmer_lemeshow.png
+   05_matriz_confusion.png
+   06_residuos_vs_prob.png
+   07_estabilidad_por_anio.png
+Reporte de robustez (con SE cluster-robust): C:\Users\david\OneDrive\Desktop\TODO\informalidad-laboral-colombia\figures\micro\reporte_robustez.txt
+Validación cruzada y benchmark (CSV): C:\Users\david\OneDrive\Desktop\TODO\informalidad-laboral-colombia\figures\micro\validacion_cruzada.csv
+
+El log completo de TODO lo impreso durante esta ejecución
+(lectura por año/mes, verificación de variables, VIF, Hosmer-
+Lemeshow, ROC, diagnóstico IMR, etc.) está en un archivo separado
+con nombre 'log_completo_ejecucion_<timestamp>.txt' en la misma
+carpeta: C:\Users\david\OneDrive\Desktop\TODO\informalidad-laboral-colombia\figures\micro

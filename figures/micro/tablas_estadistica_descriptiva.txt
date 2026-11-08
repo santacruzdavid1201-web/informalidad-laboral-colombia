@@ -1,0 +1,68 @@
+===================================================================================================================
+TABLA 1: ESTADÍSTICA DESCRIPTIVA — MUESTRA DE OCUPADOS (PROBIT Y 2ª ETAPA HECKMAN)
+GEIH Colombia (2022–2025, Trimestre 2: Abril–Junio)
+Total Ocupados: 367,665  |  Formales: 127,752 (34.7%)  |  Informales: 239,913 (65.3%)
+===================================================================================================================
+Variable / Indicador                         | Total Media    (Std)    | Formal Media | Informal Media | Dif (Inf-Form)
+-------------------------------------------------------------------------------------------------------------------
+Trabajador informal (1 = Sí)                 |    65.25%     (0.476)   |     0.00%    |    100.00%     | +100.00 pp    
+Mujer (1 = Sí)                               |    43.95%     (0.496)   |    46.63%    |     42.52%     |  -4.11 pp *** 
+Edad (años)                                  |     41.318    (13.978)  |     39.184   |      42.455    |    +3.271 *** 
+Cuidado de niños < 5 años en el hogar (1 =   |     9.30%     (0.290)   |     9.13%    |      9.39%     |  +0.26 pp *** 
+Interacción Mujer × Cuidado niños (1 = Sí)   |     5.57%     (0.229)   |     5.15%    |      5.79%     |  +0.64 pp *** 
+Persona trans / no binaria (1 = Sí)          |     0.10%     (0.031)   |     0.07%    |      0.11%     |  +0.04 pp *** 
+Orientación sexual diversa / no hetero (1 =  |     1.33%     (0.115)   |     1.50%    |      1.24%     |  -0.26 pp *** 
+Pertenencia étnica minoritaria (1 = Sí)      |    11.89%     (0.324)   |     9.08%    |     13.39%     |  +4.31 pp *** 
+Autorreconocimiento campesino (1 = Sí)       |    30.81%     (0.462)   |    19.47%    |     36.84%     | +17.37 pp *** 
+En unión libre o casado/a (1 = Sí)           |    54.73%     (0.498)   |    55.99%    |     54.05%     |  -1.94 pp *** 
+Nivel educativo: Primaria o menos (1 = Sí)   |    19.98%     (0.400)   |     5.77%    |     27.55%     | +21.78 pp *** 
+Nivel educativo: Secundaria / Media (1 = Sí  |    42.19%     (0.494)   |    33.88%    |     46.62%     | +12.73 pp *** 
+Nivel educativo: Superior / Universitaria (  |    37.82%     (0.485)   |    60.34%    |     25.83%     | -34.51 pp *** 
+Horas habituales trabajadas por semana       |     44.320    (13.387)  |     47.472   |      42.642    |    -4.830 *** 
+Jornada parcial (< 35 horas/sem) (1 = Sí)    |    16.30%     (0.369)   |     2.66%    |     23.57%     | +20.91 pp *** 
+Jornada completa (35 a 48 horas/sem) (1 = S  |    62.44%     (0.484)   |    83.53%    |     51.21%     | -32.33 pp *** 
+Sobretrabajo (> 48 horas/sem) (1 = Sí)       |    21.26%     (0.409)   |    13.80%    |     25.22%     | +11.42 pp *** 
+Desea cambiar de trabajo (1 = Sí)            |    20.23%     (0.402)   |     8.84%    |     26.30%     | +17.46 pp *** 
+Ocupación alta calificación (CIUO 1-3) (1 =  |    25.12%     (0.434)   |    38.21%    |     18.15%     | -20.06 pp *** 
+Zona rural / Resto (1 = Sí, 0 = Cabecera)    |    12.00%     (0.325)   |     5.20%    |     15.63%     | +10.43 pp *** 
+Tasa informalidad sectorial de la rama (loo  |      0.653    (0.248)   |      0.475   |       0.747    |    +0.271 *** 
+Migrante reciente (residencia diferente hac  |     2.53%     (0.157)   |     2.39%    |      2.60%     |  +0.21 pp *** 
+Nacido en el extranjero (1 = Sí)             |     4.78%     (0.213)   |     1.69%    |      6.43%     |  +4.75 pp *** 
+Tasa de dependencia del hogar (ocupados/per  |      0.614    (0.264)   |      0.619   |       0.612    |    -0.007 *** 
+Recibe subsidio o ayuda en dinero del gob.   |     6.35%     (0.244)   |     1.71%    |      8.81%     |  +7.10 pp *** 
+Hogar cuenta con ingresos no laborales (1 =  |    46.74%     (0.499)   |    47.52%    |     46.33%     |  -1.20 pp *** 
+Inverse Mills Ratio (IMR / Heckman)          |      0.607    (0.281)   |      0.539   |       0.643    |    +0.105 *** 
+-------------------------------------------------------------------------------------------------------------------
+Notas: En variables binarias (Dummy) se reporta el porcentaje (%); en continuas se reporta la media y (desv. estándar).
+Diferencia (Informal - Formal) evaluada con prueba t de Welch para dos muestras independientes.
+Nivel de significancia: *** p < 0.01, ** p < 0.05, * p < 0.10. pp = puntos porcentuales.
+
+
+
+===================================================================================================================
+TABLA 2: ESTADÍSTICA DESCRIPTIVA — POBLACIÓN EN EDAD DE TRABAJAR (PET >= 15 AÑOS, 1ª ETAPA HECKMAN)
+GEIH Colombia (2022–2025, Trimestre 2: Abril–Junio)
+Total PET: 680,247  |  Participan: 367,665 (54.0%)  |  No participan: 312,582 (46.0%)
+===================================================================================================================
+Variable / Indicador                         | Total Media    (Std)    | Participa Media | No Part. Media | Dif (Part-NoPart)
+-------------------------------------------------------------------------------------------------------------------
+Participa en el mercado laboral / Ocupado (  |    54.05%     (0.498)   |     100.00%     |      0.00%     |  +100.00 pp     
+Cuidado dependientes [Variable Exclusión] (  |     3.07%     (0.172)   |       2.37%     |      3.88%     |   -1.51 pp ***  
+Mujer (1 = Sí)                               |    54.39%     (0.498)   |      43.95%     |     66.68%     |  -22.73 pp ***  
+Edad (años)                                  |     42.713    (18.664)  |      41.318     |      44.353    |     -3.034 ***  
+Pertenencia étnica minoritaria (1 = Sí)      |    12.59%     (0.332)   |      11.89%     |     13.42%     |   -1.53 pp ***  
+Autorreconocimiento campesino (1 = Sí)       |    31.23%     (0.463)   |      30.81%     |     31.72%     |   -0.91 pp ***  
+Recibe subsidio o ayuda en dinero del gob.   |     9.15%     (0.288)   |       6.35%     |     12.46%     |   -6.11 pp ***  
+En unión libre o casado/a (1 = Sí)           |    48.56%     (0.500)   |      54.73%     |     41.31%     |  +13.42 pp ***  
+Nivel educativo: Primaria o menos (1 = Sí)   |    24.10%     (0.428)   |      19.98%     |     28.94%     |   -8.96 pp ***  
+Nivel educativo: Secundaria / Media (1 = Sí  |    42.56%     (0.494)   |      42.19%     |     43.00%     |   -0.80 pp ***  
+Nivel educativo: Superior / Universitaria (  |    33.34%     (0.471)   |      37.82%     |     28.06%     |   +9.76 pp ***  
+Zona rural / Resto (1 = Sí, 0 = Cabecera)    |    12.13%     (0.326)   |      12.00%     |     12.27%     |   -0.27 pp ***  
+Migrante reciente (residencia diferente hac  |     2.53%     (0.157)   |       2.53%     |      2.54%     |   -0.02 pp      
+Nacido en el extranjero (1 = Sí)             |     4.12%     (0.199)   |       4.78%     |      3.34%     |   +1.44 pp ***  
+-------------------------------------------------------------------------------------------------------------------
+Notas: En variables binarias (Dummy) se reporta el porcentaje (%); en continuas se reporta la media y (desv. estándar).
+CUIDADO_DEPENDIENTES es la variable de exclusión exógena para la ecuación de participación laboral.
+Diferencia (Participa - No Participa) evaluada con prueba t de Welch para dos muestras independientes.
+Nivel de significancia: *** p < 0.01, ** p < 0.05, * p < 0.10. pp = puntos porcentuales.
+===================================================================================================================

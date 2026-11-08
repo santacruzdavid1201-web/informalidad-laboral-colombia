@@ -1,0 +1,29 @@
+REPORTE DE ROBUSTEZ Y ESPECIFICACIÓN - HECKMAN INFORMALIDAD
+======================================================================
+
+Notas: SE robustos agrupados (cluster-robust) por hogar (DIRECTORIO).
+No incorporan la incertidumbre de estimación del IMR generado en
+la 1ra etapa, por lo que pueden subestimar los errores estándar
+(Murphy & Topel, 1985). Se reporta como limitación metodológica.
+Significancia: *** p<0.01, ** p<0.05, * p<0.1
+
+Variable               |     M1 (Base)      |  M2 (Rob 1 Hogar)  |  M3 (Rob 2 Subs)   |   M4 (Combinado)  
+---------------------------------------------------------------------------------------------------------
+MUJER                  |      -0.0067       |      +0.0045       |      +0.0028       |      +0.0106*     
+                       |      (0.0059)      |      (0.0058)      |      (0.0059)      |      (0.0058)     
+MUJER_CUIDADO          |     +0.0589***     |     +0.0474***     |     +0.0809***     |     +0.0715***    
+                       |      (0.0121)      |      (0.0121)      |      (0.0120)      |      (0.0120)     
+SUBSIDIO_GOB           |     +0.5348***     |     +0.5028***     |      Excluida      |      Excluida     
+                       |      (0.0173)      |      (0.0172)      |                    |                   
+TIENE_ING_NO_LAB       |     -0.2138***     |     -0.2054***     |     -0.1867***     |     -0.1819***    
+                       |      (0.0057)      |      (0.0057)      |      (0.0057)      |      (0.0057)     
+EN_PAREJA              |     -0.0848***     |      Excluida      |     -0.0606***     |      Excluida     
+                       |      (0.0058)      |                    |      (0.0057)      |                   
+IMR                    |     +0.8810***     |     +1.1138***     |     +1.9146***     |     +2.0410***    
+                       |      (0.0718)      |      (0.0716)      |      (0.0670)      |      (0.0666)     
+---------------------------------------------------------------------------------------------------------
+Observaciones          |      366,567       |      366,567       |      366,567       |      366,567      
+Pseudo R-squared       |       0.3021       |       0.3016       |       0.2998       |       0.2996      
+Log-Likelihood         |     -165,218.5     |     -165,335.7     |     -165,756.4     |     -165,817.4    
+
+======================================================================
