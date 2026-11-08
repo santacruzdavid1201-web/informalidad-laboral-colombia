@@ -65,7 +65,7 @@ Power BI Dashboard
 
 # Key Findings
 
-* Higher education (compared with primary education) reduces the estimated probability of labor informality by **24–28 percentage points**, even after correcting for sample selection using a Heckman model.
+* Higher education (compared with primary education or less) reduces the estimated probability of labor informality by **21–23 percentage points**: **−23.35 pp** in the probit and **−20.71 pp** after correcting for sample selection with a Heckman model (average marginal effects; the Heckman figure is the direct effect, holding the inverse Mills ratio fixed).
 * A four-factor competitiveness framework—covering **digital human capital, territorial infrastructure, labor conditions, and innovation**—explains regional differences in informality, with statistically significant effects in the department-level Random Effects specification (validated through Hausman and Mundlak tests).
 * Replacing childcare variables with **care responsibilities for elderly, sick, or disabled household members** produced a substantially stronger exclusion restriction, reducing the correlation between the inverse Mills ratio and the exclusion variable from approximately **0.71 to 0.055**, improving identification of the Heckman model.
 
@@ -89,9 +89,9 @@ Power BI Dashboard
 
 ![Temporal Evolution](figures/macro/09_evolucion_temporal.png)
 
-### Micro Model Diagnostics (Heckman Selection Model)
+### Micro Model Diagnostics (Informality Probit)
 
-*Model discrimination and goodness-of-fit for the Heckman probit specification.*
+*Discrimination of the informality probit (without the selection correction) on 366,567 employed workers: in-sample AUC = 0.853; 5-fold cross-validated AUC with folds grouped by household = 0.853 ± 0.001. The confusion matrix uses the Youden-optimal threshold (0.638). The Heckman model is used for inference on the coefficients.*
 
 ![ROC Curve](figures/micro/graficas/03_curva_roc.png)
 
