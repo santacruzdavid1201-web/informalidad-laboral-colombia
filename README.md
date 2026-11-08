@@ -93,9 +93,9 @@ Power BI Dashboard
 
 *Model discrimination and goodness-of-fit for the Heckman probit specification.*
 
-![ROC Curve](figures/micro/03_curva_roc.png)
+![ROC Curve](figures/micro/graficas/03_curva_roc.png)
 
-![Confusion Matrix](figures/micro/05_matriz_confusion.png)
+![Confusion Matrix](figures/micro/graficas/05_matriz_confusion.png)
 
 ---
 
